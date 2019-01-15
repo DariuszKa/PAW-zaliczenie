@@ -1,0 +1,10 @@
+com\ebd\login\util\SessionUtils.class
+com\ebd\login\filter\LoginAuthorizationFilter.class
+com\ebd\login\util\DataConnect.class
+com\ebd\news\jpa\News.class
+com\ebd\login\dao\LoginDAO.class
+com\ebd\news\beans\NewsLookupDatabaseBean.class
+com\ebd\news\beans\NewsLookupService.class
+com\ebd\news\beans\NewsManager.class
+com\ebd\login\beans\LoginBean.class
+com\ebd\news\ejb\NewsBean.class

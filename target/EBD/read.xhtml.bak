@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+
+<f:metadata>
+    <f:viewParam name="id" value="#{newsManagedBean.id}"/>
+    <!-- f:viewParam name="id" value="412" / -->
+</f:metadata>
+
+<h:body>
+    <ui:composition template="/WEB-INF/templates/template.xhtml"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:h="http://java.sun.com/jsf/html"
+                    xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+        <ui:define name="content">
+
+            <div id="sf_admin_container">
+                <div id="sf_admin_content">
+                    <div id="login_form">
+                        <h2>
+                            Czytanie rozdziału <h:outputText value="#{newsManagedBean.id}"/>
+                        </h2>
+
+                        <h:form id="edit-news-form" enctype="multipart/form-data">
+                            <!-- <div class="notice">
+                                <h:messages/>
+                            </div> -->
+                            <table>
+                                <!-- <tfoot class="stdfooter">
+                                <tr>
+                                    <td colspan="2">
+                                        <h:commandButton value="Aktualizuj" action="#{newsManagedBean.update}"/> &nbsp;
+                                        <h:button outcome="list.xhtml" value="Lista newsów"/>
+                                    </td>
+                                </tr>
+                                </tfoot> -->
+                                <tbody>
+                                <tr>
+                                    <th width="15%"><label>Rozdział:</label></th>
+                                    <td><h:outputText value="#{newsManagedBean.title}"
+                                                     id="chapter" required="true"
+                                                     requiredMessage="Pole tytuł jest wymagane" size="90"/></td>
+                                </tr>
+                                <tr>
+                                    <th width="15%"><label>Treść</label></th>
+                                    <td><!-- <h:outputText name="treść" id="output_field" value="#{newsManagedBean.content}"
+                                                      cols="50" rows="20"/> -->
+                                        <!--<h:outputText name="treść" id="output_field" value="#{newsManagedBean.content}" style="display:block;height:280px"/> -->
+                                        <h:inputTextarea id="content" value="#{newsManagedBean.content}" cols="90" rows="22" required="true"
+                                                         requiredMessage="Pole treść jest wymagane" readonly = "true"/>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </h:form>
+
+                    </div>
+                </div>
+            </div>
+
+        </ui:define>
+
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Strona logowania</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h2>Logowanie użytkownika</h2>
+        <h:outputText value="Twój login:  "/>
+        <h:inputText value="#{loginBean.user}"
+                     id="username"
+                     required="true"
+                     requiredMessage=" Pole Twój login jest wymagane!"
+                     validatorMessage=" Niepoprawny format pola. Wpisz 5-15 liter/cyfr">
+            <f:validateLength minimum="5"/>
+            <f:validateLength maximum="15"/>
+        </h:inputText>
+        <h:message for="username"></h:message>
+        <br/><br/>
+
+        <h:outputText value="Kod wejścia: "/>
+        <h:inputSecret value="#{loginBean.pwd}"
+                       id="password"
+                       required="true"
+                       requiredMessage=" Pole Kod wejścia jest wymagane!"
+                       validatorMessage=" Niepoprawny format pola. Wpisz 5-15 liter/cyfr">
+            <f:validateLength minimum="5"/>
+            <f:validateLength maximum="15"/>
+        </h:inputSecret>
+        <h:message for="password"></h:message>
+        <p style="font-style: italic;">
+            Uwaga! Wersja testowa serwisu. Nie używaj haseł stosowanych do innych celów!
+        </p>
+        <br/><br/>
+
+        <h:commandButton action="#{loginBean.validateUsernamePassword}" value="Zaloguj"></h:commandButton>
+    </h:form>
+
+    <hr/>
+    <a href="signup.xhtml">Utwórz konto w serwisie</a>
+
+</h:body>
+</html>

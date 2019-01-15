@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsf/core" xmlns:s="http://java.sun.com/jsp/jstl/core">
+
+<f:metadata>
+    <f:viewParam name="page" value="#{newsManager.page}"/>
+    <f:viewParam name="wasRead" value="#{newsManager.wasRead}"/>
+
+    <f:viewParam name="id" value="#{newsManagedBean.id}"/>
+    <f:viewParam name="title" value="#{newsManagedBean.title}"/>
+
+    <!-- <f:viewParam name="volume" value="#{loginBean.volume}"/> -->
+    <f:viewParam name="volume" value="#{newsManager.volume}"/>
+    <f:viewParam name="volume" value="#{newsManagedBean.volume}"/>
+
+    <f:viewParam name="user" value="#{LoginBean.user}"/>
+    <f:viewParam name="user" value="#{newsManager.user}"/>
+</f:metadata>
+
+<h:head>
+    <title>Witaj, "#{loginBean.user}" !</title>
+    <h:outputStylesheet library="css" name="main.css"/>
+    <h:outputStylesheet library="css" name="admin.css"/>
+</h:head>
+
+<h:body>
+
+    <ui:composition template="/WEB-INF/templates/template.xhtml"
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    xmlns:h="http://java.sun.com/jsf/html"
+                    xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:ui="http://java.sun.com/jsf/facelets">
+        <ui:define name="content">
+
+            <div id="sf_admin_container">
+                <div id="sf_admin_content">
+
+                    <div class="sf_admin_list">
+
+                        <h:dataTable var="news" value="#{newsManager.newsList}" cellspacing="0" rowClasses="odd,even">
+                            <!-- <h:column>
+                                <f:facet name="header">&nbsp;ID&nbsp;</f:facet>
+                                &nbsp;#{news.id}
+                            </h:column> -->
+                            <h:column>
+                                <f:facet name="header">R.</f:facet>
+                                #{news.titleAbbr}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Treść</f:facet>
+                                #{news.contentAbbr}
+                                <f:facet name="footer">
+
+                                    <div class="container">
+                                        <h:outputText value="#{newsManager.tableListCaption}" id="caption1"/>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </div>
+
+                                    <div class="container">
+                                        <h:link outcome="list.xhtml?page=#{newsManager.firstPage}" value="">
+                                            <h:graphicImage library="img" name="first.png"/>
+                                        </h:link>
+                                        &nbsp;
+                                        <h:link outcome="list.xhtml?page=#{newsManager.previousPage}" value="">
+                                            <h:graphicImage library="img" name="previous.png"/>
+                                        </h:link>
+                                        &nbsp;
+                                        <h:link outcome="list.xhtml?page=#{newsManager.nextPage}" value="">
+                                            <h:graphicImage library="img" name="next.png"/>
+                                        </h:link>
+                                        &nbsp;
+                                        <h:link outcome="list.xhtml?page=#{newsManager.lastPage}" value="">
+                                            <h:graphicImage library="img" name="last.png"/>
+                                        </h:link>
+                                        &nbsp;
+                                    </div>
+
+                                </f:facet>
+
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">&nbsp;S.&nbsp;</f:facet>
+                                &nbsp;#{news.wasRead}
+                            </h:column>
+
+                            <h:column>
+                                <!--
+                                <f:facet name="header">Data dodania</f:facet> -->
+                                <f:facet name="header">Zaplanowane</f:facet>
+                                #{news.createdAtAbbr}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Przeczytane</f:facet>
+                                <!-- <f:facet name="header">Data przecz.</f:facet> -->
+                                #{news.updatedAtAbbr}
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">Akcja............</f:facet>
+                                <h:link outcome="read.xhtml?id=#{news.id}" value="" title="Czytaj">
+                                    <h:graphicImage library="img" name="read.png"/>
+                                </h:link>
+                                &nbsp;
+
+                                <s:if test="#{loginBean.isAdmin}">
+                                    <h:link outcome="edit.xhtml?id=#{news.id}" value="" title="Edytuj">
+                                        <h:graphicImage library="img" name="edit.png"/>
+                                    </h:link>
+                                    &nbsp;
+                                </s:if>
+
+                                <!-- <h:link outcome="list.xhtml?removeId=#{news.id}" value="" title="Oznacz jako przeczytane"> -->
+                                <h:link outcome="list.xhtml?wasRead=#{news.id};title;false" value="" title="Oznacz jako przeczytane">
+                                    <h:graphicImage library="img" name="readYes.png"/>
+                                </h:link>
+                                &nbsp;
+
+                                <!-- <h:link outcome="list.xhtml?removeId=#{news.id}" value="" title="Oznacz jako nieprzeczytane"> -->
+                                <h:link outcome="list.xhtml?wasRead=#{news.id};volume;title;true;#{loginBean.user}" value="" title="Oznacz jako nieprzeczytane">
+                                    <h:graphicImage library="img" name="readNot.png"/>
+                                </h:link>
+
+                            </h:column>
+
+                        </h:dataTable>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </ui:define>
+    </ui:composition>
+
+    <h:commandLink action="#{loginBean.logout}" value="Wyloguj"></h:commandLink>
+</h:body>
+</html>

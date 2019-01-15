@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:div="http://www.w3.org/1999/xhtml"
+      xmlns:a="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:s="http://java.sun.com/jsp/jstl/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<f:metadata>
+    <f:viewParam name="bibleMap" value="#{newsManager.bibleMap}"/>
+</f:metadata>
+
+<h:head>
+    <h:outputStylesheet library="css" name="main.css"/>
+    <h:outputStylesheet library="css" name="admin.css"/>
+</h:head>
+
+<h:body>
+
+    <h:form id="menu_form">
+
+        <div id="wrapper">
+            <div id="header">
+                <div class="login">
+                    Witaj, jesteś zalogowany/a jako
+                    <span class="user_login"> <h:outputText value="#{loginBean.user}"/> </span>
+                    <br/>
+                    <h:commandLink action="#{loginBean.logout}" value="Wyloguj się!"/>
+                </div>
+            </div>
+
+            <div id="main">
+                <c:choose>
+                    <c:when test="#{newsManager.volume != null}">
+                        Wybrano księgę: <h:outputText value="#{newsManager.volume}"/>
+                    </c:when>
+                    <c:otherwise>
+                        Wersja Beta serwisu.
+                    </c:otherwise>
+                </c:choose>
+                <div id="menu">
+                    <a href="" class="head" id="menu1">Wybierz księgę:</a>
+                    <div class="menu_list" id="menu1_list" >
+                        <c:forEach items="#{newsManager.bibleMap}" var="entry">
+                            <c:set var="str" value="list.xhtml?volume=#{entry.key}"/>
+                            <h:link value="#{entry.key}" outcome="${str}"/>
+                        </c:forEach>
+                    </div>
+                </div>
+                <div id="content">
+                    <ui:include src="/WEB-INF/templates/header.xhtml"/>
+
+                    <ui:insert name="content">
+                        Default Content
+                    </ui:insert>
+                </div>
+            </div>
+            <ui:include src="/WEB-INF/templates/footer.xhtml"/>
+        </div>
+    </h:form>
+
+</h:body>
+</html>

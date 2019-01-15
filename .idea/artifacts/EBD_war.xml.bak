@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="EBD:war">
+    <output-path>$PROJECT_DIR$/target/</output-path>
+    <root id="archive" name="EBD_war.war">
+      <element id="artifact" artifact-name="EBD:war exploded" />
+    </root>
+  </artifact>
+</component>

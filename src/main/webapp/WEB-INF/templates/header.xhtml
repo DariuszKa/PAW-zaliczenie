@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <p xmlns="http://www.w3.org/1999/xhtml">
+        <!-- Wybrano księgę: <h:outputText value="#{newsManager.volume}"/> -->
+        <c:choose>
+            <!-- <c:if test="person==null || person.id==null || person.id==''"> -->
+            <c:when test="#{newsManager.volume == null}">
+                Wybierz księgę z menu po lewej stronie.
+            </c:when>
+            <c:otherwise>
+                <!-- Wybrano księgę <h:outputText value="#{newsManager.volume}"/> -->
+                <h2><h:outputText value="#{newsManager.volumeLong}"/></h2>
+            </c:otherwise>
+        </c:choose>
+    </p>
+</html>
