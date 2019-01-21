@@ -93,19 +93,20 @@ public class NewsManager implements Serializable {
         else {
             logger.info("NewsManager: createList: connection is NOT null");
             try {
-                Statement stmt = connection.createStatement();
-                String query = "Select * From " + volume.replace(" ", "");
-                System.out.println("NewsManager: createList: query = >" + query + "<");
-                ResultSet rs = stmt.executeQuery(query);
-                System.out.println("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
-                int columnCount = rs.getMetaData().getColumnCount();
-                System.out.println("NewsManager: createList: columnCount=" + columnCount);
-                for (int i = 1; i <= columnCount; i++) {
-                    System.out.print(rs.getMetaData().getColumnName(i) + " ");
-                }
-                System.out.println();
-                //allNewsList.clear();
-                while (rs.next()) {
+                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
+                    Statement stmt = connection.createStatement();
+                    String query = "Select * From " + volume.replace(" ", "");
+                    System.out.println("NewsManager: createList: query = >" + query + "<");
+                    ResultSet rs = stmt.executeQuery(query);
+                    System.out.println("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    int columnCount = rs.getMetaData().getColumnCount();
+                    System.out.println("NewsManager: createList: columnCount=" + columnCount);
+                    for (int i = 1; i <= columnCount; i++) {
+                        System.out.print(rs.getMetaData().getColumnName(i) + " ");
+                    }
+                    System.out.println();
+                    //allNewsList.clear();
+                    while (rs.next()) {
                     /*for (int i = 1; i <= 2; i++)
                         System.out.print(rs.getInt(i) + "\t");
                     for (int i = 3; i <= 4; i++)
@@ -114,20 +115,22 @@ public class NewsManager implements Serializable {
                         System.out.print(rs.getTimestamp(i) + "\t");
                     /*for (int i = 5; i < 6; i++)
                         System.out.print(rs.getTimestamp(i) + "\t");*/
-                    News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
-                    allNewsList.add(news);
+                        News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                        allNewsList.add(news);
+                    }
+                    System.out.println("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
+                    int size = Math.min(allNewsList.size(), resultPerPage);
+                    System.out.println("NewsManager: createList: size=" + size);
+                    if(size>0) {
+                        newsList = allNewsList.subList(0, size);
+                        calculatePages();
+                        generateTableCaption();
+                    }
+                    else
+                        tableListCaption = "brak rekordów!";
+                } else {
+                    throw new IllegalArgumentException(" volume='" + volume + "'");
                 }
-                System.out.println("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
-                int size = Math.min(allNewsList.size(), resultPerPage);
-                System.out.println("NewsManager: createList: size=" + size);
-                if(size>0) {
-                    //tableListCaption = "";
-                    newsList = allNewsList.subList(0, size);
-                    calculatePages();
-                    generateTableCaption();
-                }
-                else
-                    tableListCaption = "brak rekordów!";
             } catch (Exception e) {
                 tableListCaption = "Brak danych dla księgi: " + volume;
                 logger.warning(" NewsManager: createList: rs error: " + e.getMessage());
@@ -135,7 +138,6 @@ public class NewsManager implements Serializable {
                 logger.warning(" NewsManager: createList: rs error: " + e);
                 System.out.println(" NewsManager: createList: error: " + e);
             }
-
             System.out.println("NewsManager: createList: after newsList.size()=" + newsList.size());
         }
     }
@@ -156,7 +158,7 @@ public class NewsManager implements Serializable {
     }
 
 
-    public NewsLookupDatabaseBean getNewsLookupService() {
+    /*public NewsLookupDatabaseBean getNewsLookupService() {
         return newsLookupService;
     }
 
@@ -171,7 +173,7 @@ public class NewsManager implements Serializable {
             logger.info("Lookup service is NULL. Injection failed.");
             System.out.println("Lookup service is NULL. Injection failed.");
         }
-    }
+    }*/
 
     public String getVolume() {
         return volume;
@@ -438,7 +440,7 @@ public class NewsManager implements Serializable {
         this.firstPage = firstPage;
     }
 
-    public int getAllPages() {
+    /*public int getAllPages() {
         return allPages;
     }
 
@@ -452,6 +454,6 @@ public class NewsManager implements Serializable {
 
     public void setRecordsCount(long recordsCount) {
         this.recordsCount = recordsCount;
-    }
+    }*/
 
 }

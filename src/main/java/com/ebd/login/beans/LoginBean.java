@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.logging.Logger;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -14,14 +13,13 @@ import com.ebd.login.util.SessionUtils;
 import com.ebd.login.dao.LoginDAO;
 
 @ManagedBean
-//@SessionScoped
-@ApplicationScoped
+@SessionScoped
 public class LoginBean implements Serializable {
-    //private static final long serialVersionUID = 1094801825228386363L;
+    private static final long serialVersionUID = 1094801825228386363L;
     private String pwd;
     private String msg;
     private String user;
-    private HttpSession session;
+    //private HttpSession session;
     private Logger logger = Logger.getLogger("PGE-WEB");
 
     public String getPwd() {
@@ -48,16 +46,16 @@ public class LoginBean implements Serializable {
         this.user = user;
     }
 
-    public HttpSession geSession() {
+    /*private HttpSession getSession() {
         return session;
     }
 
-    public void setSession(HttpSession session) {
+    private void setSession(HttpSession session) {
         this.session = session;
-    }
+    }*/
 
     public boolean getIsAdmin() {
-        System.out.println("LoginBean: isAdmin(): user = '" + user + "'. isAdmin = " + (user.contains("admin")));
+        System.out.println("LoginBean: getIsAdmin(): user = '" + user + "'. isAdmin = " + (user.contains("admin")));
         if(user.contains("admin")) return true;
         return false;
     }
@@ -66,7 +64,7 @@ public class LoginBean implements Serializable {
         boolean valid = LoginDAO.validate(user, pwd);
         if(valid) {
             logger.info("Authorization is valid for '" + getUser() + "'");
-            session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+            HttpSession session = SessionUtils.getSession();
             //session = SessionUtils.getSession();
             session.setAttribute("username", user);
             return "list";
@@ -80,6 +78,8 @@ public class LoginBean implements Serializable {
     }
 
     public String logout() {
+        HttpSession session = SessionUtils.getSession();
+        logger.info("logout for '" + getUser() + "' '" + session.getAttribute("username") + "'");
         session.invalidate();
         return "index";
     }

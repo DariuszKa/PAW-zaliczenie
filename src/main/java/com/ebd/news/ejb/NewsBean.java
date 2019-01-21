@@ -1,8 +1,5 @@
 package com.ebd.news.ejb;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -25,11 +22,9 @@ import java.sql.ResultSet;
 public class NewsBean {
     public static final int DEFAULT_COUNT = 20;
 
-    //private Logger logger = Logger.getLogger("PawNewsExample");
     private Logger logger = Logger.getLogger("PGE-WEB");
 
     private String volume;
-    //private String volume = "2Krn";
 
     //@PersistenceUnit(unitName = "PawSignup")
     EntityManagerFactory emf;
@@ -55,7 +50,7 @@ public class NewsBean {
         }
     }
 
-    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    /*@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public boolean remove(int id) {
         EntityManager entityManager = emf.createEntityManager();
         try {
@@ -71,7 +66,7 @@ public class NewsBean {
             System.out.println("NewsBean::remove: " + e);
             return false;
         }
-    }
+    }*/
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public boolean merge(Object o) {
@@ -88,7 +83,6 @@ public class NewsBean {
             return false;
         }
     }
-
 
     //@TransactionAttribute(TransactionAttributeType.REQUIRED)
     public List<News> getLatestNews(int count) {
@@ -122,18 +116,22 @@ public class NewsBean {
                 System.out.println("NewsBean: getNews: con is null!");
             }
             else{
-                logger.info("NewsBean: getNews: con is NOT null!");
-                System.out.println("NewsBean: getNews: con is NOT null!");
-                //System.out.println("NewsBean: getNews: id=" + id);
-                /*EntityManager em = emf.createEntityManager();
-                return em.find(News.class, id);*/
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("Select * FROM " + volume.replace(" ", "") + " WHERE id=" + id);
-                System.out.println("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
-                news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
+                    logger.info("NewsBean: getNews: con is NOT null!");
+                    System.out.println("NewsBean: getNews: con is NOT null!");
+                    //System.out.println("NewsBean: getNews: id=" + id);
+                    /*EntityManager em = emf.createEntityManager();
+                    return em.find(News.class, id);*/
+                    Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery("Select * FROM " + volume.replace(" ", "") + " WHERE id=" + id);
+                    System.out.println("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+
+                } else {
+                    throw new IllegalArgumentException(" volume='" + volume + "'");
+                }
             }
             con.close();
-            //return news;
         } catch (Exception e) {
             System.out.println(" NewsBean: rs error: " + e.getMessage());
             System.out.println(" NewsBean: rs error: " + e);

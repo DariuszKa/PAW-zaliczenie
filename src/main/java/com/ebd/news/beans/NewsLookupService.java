@@ -11,5 +11,4 @@ public interface NewsLookupService {
     public List<News> getAllNews();
     public boolean merge(News news);
     public boolean persist(News news);
-    public boolean remove(int id);
 }

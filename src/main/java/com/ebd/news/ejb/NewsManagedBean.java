@@ -75,7 +75,6 @@ public class NewsManagedBean implements Serializable {
         }
         if (this.newsLookupService != null && id != 0) {
             System.out.println("NewsManagedBean: setId(int id): 6");
-            ////////this.news = this.newsLookupService.getNews(id);
             this.news = getNews(id);
             System.out.println("NewsManagedBean: setId(int id): 7");
             if (this.news != null) {
@@ -100,34 +99,37 @@ public class NewsManagedBean implements Serializable {
             logger.info("NewsManagedBean: getNews: connection is NOT null.");
             try {
                 Statement stmt = connection.createStatement();
-                //ResultSet rs = stmt.executeQuery("Select * From " + volume + " WHERE id=" + id);
-                String query = "SELECT * FROM " + volume.replace(" ", "") + " WHERE id=" + id;
-                System.out.println("NewsManagedBean: getNews: query = >" + query + "<");
-                ResultSet rs = stmt.executeQuery(query);
-                System.out.println("NewsManagedBean: getNews: Columns in the table: " + rs.getMetaData().getTableName(1));
-                int columnCount = rs.getMetaData().getColumnCount();
-                System.out.println("NewsManagedBean: getNews: columnCount=" + columnCount);
-                for (int i = 1; i <= columnCount; i++) {
-                    System.out.print(rs.getMetaData().getColumnName(i) + " ");
-                }
-                System.out.println();
-                while (rs.next()) {
-                    /*for (int i = 1; i <= 2; i++)
-                        System.out.print(rs.getInt(i) + "\t");
-                    for (int i = 3; i <= 4; i++)
-                        System.out.print(rs.getString(i) + "\t");
-                    for (int i = 5; i <= 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");
-                    /*for (int i = 5; i < 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");*/
-                    //System.out.print(getRes(rs, i) + "\t");
-                        /*String string;
-                        if(rs.wasNull()) string = "NULL";
-                        else string = rs.getString(i);
-                        System.out.print(string + "\t");
-                        System.out.println();*/
-                    News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
-                    return news;
+                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
+                    String query = "SELECT * FROM " + volume + " WHERE id=" + id;
+                    System.out.println("NewsManagedBean: getNews: query = >" + query + "<");
+                    ResultSet rs = stmt.executeQuery(query);
+                    System.out.println("NewsManagedBean: getNews: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    int columnCount = rs.getMetaData().getColumnCount();
+                    System.out.println("NewsManagedBean: getNews: columnCount=" + columnCount);
+                    for (int i = 1; i <= columnCount; i++) {
+                        System.out.print(rs.getMetaData().getColumnName(i) + " ");
+                    }
+                    System.out.println();
+                    while (rs.next()) {
+                        /*for (int i = 1; i <= 2; i++)
+                            System.out.print(rs.getInt(i) + "\t");
+                        for (int i = 3; i <= 4; i++)
+                            System.out.print(rs.getString(i) + "\t");
+                        for (int i = 5; i <= 6; i++)
+                            System.out.print(rs.getTimestamp(i) + "\t");
+                        /*for (int i = 5; i < 6; i++)
+                            System.out.print(rs.getTimestamp(i) + "\t");*/
+                        //System.out.print(getRes(rs, i) + "\t");
+                            /*String string;
+                            if(rs.wasNull()) string = "NULL";
+                            else string = rs.getString(i);
+                            System.out.print(string + "\t");
+                            System.out.println();*/
+                        News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                        return news;
+                    }
+                }else {
+                    throw new IllegalArgumentException(" volume='" + volume + "'");
                 }
             } catch (Exception e) {
                 logger.warning("NewsManagedBean: getNews: rs error: " + e.getMessage());
@@ -185,7 +187,7 @@ public class NewsManagedBean implements Serializable {
         return null;
     }
 
-    public String add() {
+    /*public String add() {
         FacesContext context = FacesContext.getCurrentInstance();
         this.news = new News();
         this.news.setUpdatedAt(new Date());
@@ -200,6 +202,6 @@ public class NewsManagedBean implements Serializable {
             return null;
         }
         return "list";//"edit.xhtml?id=" + news.getId();
-    }
+    }*/
 
 }

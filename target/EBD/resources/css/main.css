@@ -11,39 +11,39 @@ body {
 	margin: 0 auto;
 	border: 2px solid #333;
 	background: #ddd;
-	}
+}
 
 #header {
 	height: 50px;
 	background: url("#{resource['img:top.png']}") top left no-repeat;
 	background-color: #ccc;
 	border-bottom: 1px solid #333;
-	}
-	
+}
+
 #header .login {
 	float: right;
 	width: 300px;
 	margin: 8px 15px 10px 5px;
-	line-height: 15px;	  
+	line-height: 15px;
 	color: #eee;
 	font-size: 10px;
 	text-align: right;
-    }
-	
+}
+
 #header .user_login {
-    clear: both;
-    font-weight: bold;
-    color: #f57a03;
-    font-size: 12px;
-    }
-    
+	clear: both;
+	font-weight: bold;
+	color: #f57a03;
+	font-size: 12px;
+}
+
 #header .login > a {
 	color: #eee;
 	font-size: 9px;
 	line-height: 10px;
 	text-decoration: none;
-	}
-	
+}
+
 #footer {
 	height: 30px;
 	background-color: #ccc;
@@ -52,8 +52,8 @@ body {
 	padding: 0px 10px;
 	line-height: 30px;
 	text-align: right;
-	color: #333;	
-	}
+	color: #333;
+}
 
 #main {
 }
@@ -67,7 +67,7 @@ body {
 }
 
 #menu_emptyblock {
-	width: 170px;	
+	width: 170px;
 	height: 520px;
 	float: left;
 }
@@ -78,31 +78,34 @@ body {
 	padding: 1px 5px;
 	color: #333;
 	font-size: 10px;
-	}
+}
 
 #menu a.nav {
 	background-color: #ccc;
 	color: #333;
 	padding: 4px 10px;
-	}
-	
-#menu a.head {
+}
+
+#menu .submenu {
 	background-color: #333;
 	color: #eee;
-	padding: 4px 5px;
 	border-top: 1px solid #ccc;
-	border-left: 5px solid transparent;
-	}
+	border-left: 1px solid transparent;
+	display: block;
+	text-decoration: none;
+	padding: 1px 1px;
+	font-size: 10px;
+}
 
 #menu a.head:hover, #menu a.head.active {
 	border-left: 5px solid #f57a03;
-	}
-	
+}
+
 #menu .menu_list_no_slider {
 	background-color: #ccc;
 	padding: 2px 0 5px 0;
 	line-height: 15px;
-	}
+}
 
 #menu .menu_list {
 	background-color: #ccc;
@@ -110,66 +113,66 @@ body {
 	line-height: 15px;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	height: 528px;
-	}
+	height: 534px;
+}
 
 #menu .menu_list a {
 	border-left: 5px solid transparent;
-	}
- 
+}
+
 #menu .menu_list a:hover, #menu .menu_list a.active {
 	color_backup: #783c00;
 	font-weight: bold;
 	border-color: #333;
 	background-color: #bbb;
-	}
-	
+}
+
 #menu .menu_list a.sub:hover, #menu .menu_list a.sub.active {
 	padding-left: 5px;
 	border-left: 20px solid #333;
-	}
-		
+}
+
 #menu a.sub {
- 	padding-left: 20px;
- 	}
-   
+	padding-left: 20px;
+}
+
 #menu a.inactive {
 	color: #aaa;
-	}
-	
+}
+
 #menu a.dir {
- 	padding: 4px 10px;
- 	}
+	padding: 4px 10px;
+}
 
 #content {
 	padding: 10px 20px 20px 20px;
-	margin-left: 100px;
+	margin-left: 110px;
 	min-height: 510px;
 	background-color: #ddd;
 	color: #111;
 	font-size: 11px;
-	}
+}
 
 #content p {
-   text-align: justify;
-   margin: 5px 0 15px 0;
-   padding: 0;
-   text-indent: 20px;
-   }
+	text-align: justify;
+	margin: 5px 0 15px 0;
+	padding: 0;
+	text-indent: 20px;
+}
 
 #content a, a:visited  {
 	font-size: 11px;
 	text-decoration: none;
 	color: #878787;
-	}
+}
 
 #content a:hover {
 	text-decoration: underline;
-	}
-	
+}
+
 #content h1 a, a:visited  {
 	font-size: 14px;
-	}
+}
 
 .clear { clear: both }
 
@@ -177,24 +180,24 @@ body {
 #login_form {
 	width: 500px;
 	margin: 30px 0 30px 30px;
-	}
-	
-#login_form h1 { 
+}
+
+#login_form h1 {
 	text-align: center;
 	font-size: 20px;
 	margin: 0 0 30px 0;
-	}
+}
 
 #login_form table { width: 500px; }
 #login_form table td { width: 250px; }
 #login_form form label {
-	width: 150px; 
+	width: 150px;
 	margin-left: 80px;
-	text-align: left; 
+	text-align: left;
 	display: block;
-	font-size: 14px; 
-	}
-	
+	font-size: 14px;
+}
+
 #login_form input {
 	width: 200px;
 	border: 1px solid #aaa;
@@ -230,7 +233,7 @@ body {
 	text-align: center;
 	color: #c00;
 }
-	
+
 #notice {
 	width: 500px;
 	margin-left: 30px;
@@ -255,7 +258,7 @@ body {
 
 input {
 	border-radius: 3px;
-	-moz-border-radius: 3px; 	
+	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	padding: 2px;
 }
@@ -266,101 +269,101 @@ input {
 }
 #sf_admin_container ul li.sf_admin_action_accept a
 {
-  background: url("#{resource['img:tick.png']}") no-repeat 0 0;
+	background: url("#{resource['img:tick.png']}") no-repeat 0 0;
 }
 #sf_admin_container ul li.sf_admin_action_delete a
 {
-  background: url("#{resource['img:delete.png']}") no-repeat 0 0;
+	background: url("#{resource['img:delete.png']}") no-repeat 0 0;
 }
 #sf_admin_container ul li.sf_admin_action_reject a
 {
-  /*padding-top: 3px;
-  padding-bottom: 2px;
-  background: url('error.png') no-repeat 0 3px;*/
-  background: url("#{resource['img:delete.png']}") no-repeat 0 -1px;
+	/*padding-top: 3px;
+    padding-bottom: 2px;
+    background: url('error.png') no-repeat 0 3px;*/
+	background: url("#{resource['img:delete.png']}") no-repeat 0 -1px;
 }
 #sf_admin_container ul li.sf_admin_action_addsubscription a
 {
-  background: url("#{resource['img:new.png']}") no-repeat 0 -1px;
+	background: url("#{resource['img:new.png']}") no-repeat 0 -1px;
 }
 
 
 #sf_admin_container a.sf_admin_action_add
 {
-  background: url("#{resource['img:new.png']}") no-repeat -2px -1px;
-  padding-left: 16px;
-  line-height: 16px;
+	background: url("#{resource['img:new.png']}") no-repeat -2px -1px;
+	padding-left: 16px;
+	line-height: 16px;
 }
 #sf_admin_container a.sf_admin_action_edit
 {
-  background: url("#{resource['img:edit.png']}") no-repeat -2px -1px;
-  padding-left: 16px;
-  line-height: 16px;
+	background: url("#{resource['img:edit.png']}") no-repeat -2px -1px;
+	padding-left: 16px;
+	line-height: 16px;
 }
 #sf_admin_container a.sf_admin_action_delete
 {
-  background: url("#{resource['img:delete.png']}") no-repeat -2px -1px;
-  padding-left: 16px;
-  line-height: 16px;
+	background: url("#{resource['img:delete.png']}") no-repeat -2px -1px;
+	padding-left: 16px;
+	line-height: 16px;
 }
 
 #sf_admin_container a.sf_admin_action_next
 {
-  background: url("#{resource['img:next.png']}") no-repeat -1px -1px;
-  padding-bottom: 1px;
-  padding-left: 19px;
-  line-height: 16px;
+	background: url("#{resource['img:next.png']}") no-repeat -1px -1px;
+	padding-bottom: 1px;
+	padding-left: 19px;
+	line-height: 16px;
 }
 
 #sf_admin_container a.sf_admin_bold
 {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 #sf_admin_container img.avatar
-{ 
-  margin: 3px 0 3px 0;
+{
+	margin: 3px 0 3px 0;
 }
 
 #sf_admin_container .mt
-{ 
-  margin-top: 5px;
+{
+	margin-top: 5px;
 }
 
 #sf_admin_container ul.radio_list input
 {
-  width: 20px;
-  float: left;
+	width: 20px;
+	float: left;
 }
 
 #sf_admin_content ul.radio_list li label
 {
-  display: inline;
-  float: left;
+	display: inline;
+	float: left;
 }
 
 #sf_admin_container ul.radio_list li
 {
-  display: block;
-  height:20px;
+	display: block;
+	height:20px;
 }
 
 #sf_admin_container ul.checkbox_list input
 {
-  width: 20px;
-  float: left;
+	width: 20px;
+	float: left;
 }
 
 #sf_admin_content ul.checkbox_list li label
 {
-  display: inline;
-  float: left;
+	display: inline;
+	float: left;
 }
 
 #sf_admin_container ul.checkbox_list li
 {
-  display: block;
-  height:20px;
+	display: block;
+	height:20px;
 }
 
 /* _image_preview.js*/
@@ -371,5 +374,5 @@ input {
 	padding:5px;
 	display:none;
 	color:#fff;
-	}
+}
 /* end _image_preview.js*/

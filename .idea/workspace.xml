@@ -6,7 +6,41 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40d48620-83dc-429d-aaef-b80f12ef71e5" name="Default" comment="" />
+    <list default="true" id="40d48620-83dc-429d-aaef-b80f12ef71e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/beans/LoginBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/dao/LoginDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/dao/LoginDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsManagedBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsManagedBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/list.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/resources/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/resources/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/login/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/login/beans/LoginBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/login/dao/LoginDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/login/dao/LoginDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsManagedBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsManagedBean.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="template.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml">
+      <file leaf-file-name="list.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="-391">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -32,29 +66,41 @@
       <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+            <state relative-caret-position="362">
+              <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
+      <file leaf-file-name="NewsLookupDatabaseBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+            <state relative-caret-position="311">
+              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-69">
+              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -62,36 +108,34 @@
       <file leaf-file-name="NewsManagedBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+            <state relative-caret-position="149">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="71" lean-forward="true" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3198#3199#0" expanded="true" />
-                <element signature="e#3242#3243#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1454#1455#0" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#1519#1520#0" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#5749#5750#0" expanded="true" />
+                <element signature="e#5777#5778#0" expanded="true" />
+                <element signature="e#5816#5817#0" expanded="true" />
+                <element signature="e#5850#5851#0" expanded="true" />
+                <element signature="e#5884#5885#0" expanded="true" />
+                <element signature="e#5914#5915#0" expanded="true" />
+                <element signature="e#5960#5961#0" expanded="true" />
+                <element signature="e#5998#5999#0" expanded="true" />
+                <element signature="e#6036#6037#0" expanded="true" />
+                <element signature="e#6070#6071#0" expanded="true" />
+                <element signature="e#6124#6125#0" expanded="true" />
+                <element signature="e#6170#6171#0" expanded="true" />
+                <element signature="e#6203#6204#0" expanded="true" />
+                <element signature="e#6232#6233#0" expanded="true" />
+                <element signature="e#6276#6277#0" expanded="true" />
+                <element signature="e#6312#6313#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,50 +144,55 @@
       <file leaf-file-name="NewsManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="1504">
+              <caret line="456" column="7" selection-start-line="456" selection-start-column="7" selection-end-line="456" selection-end-column="7" />
+              <folding>
+                <element signature="e#7653#7654#0" expanded="true" />
+                <element signature="e#7682#7683#0" expanded="true" />
+                <element signature="e#7815#7816#0" expanded="true" />
+                <element signature="e#7842#7843#0" expanded="true" />
+                <element signature="e#7882#7883#0" expanded="true" />
+                <element signature="e#7914#7915#0" expanded="true" />
+                <element signature="e#10651#10652#0" expanded="true" />
+                <element signature="e#10681#10682#0" expanded="true" />
+                <element signature="e#15398#15399#0" expanded="true" />
+                <element signature="e#15437#15438#0" expanded="true" />
+                <element signature="e#15501#15502#0" expanded="true" />
+                <element signature="e#15557#15558#0" expanded="true" />
+                <element signature="e#16099#16100#0" expanded="true" />
+                <element signature="e#16139#16140#0" expanded="true" />
+                <element signature="e#16691#16692#0" expanded="true" />
+                <element signature="e#16731#16732#0" expanded="true" />
+                <element signature="e#16759#16760#0" expanded="true" />
+                <element signature="e#16786#16787#0" expanded="true" />
+                <element signature="e#16822#16823#0" expanded="true" />
+                <element signature="e#16857#16858#0" expanded="true" />
+                <element signature="e#16910#16911#0" expanded="true" />
+                <element signature="e#16958#16959#0" expanded="true" />
+                <element signature="e#17085#17086#0" expanded="true" />
+                <element signature="e#17116#17117#0" expanded="true" />
+                <element signature="e#17161#17162#0" expanded="true" />
+                <element signature="e#17201#17202#0" expanded="true" />
+                <element signature="e#17233#17234#0" expanded="true" />
+                <element signature="e#17264#17265#0" expanded="true" />
+                <element signature="e#17309#17310#0" expanded="true" />
+                <element signature="e#17349#17350#0" expanded="true" />
+                <element signature="e#17382#17383#0" expanded="true" />
+                <element signature="e#17414#17415#0" expanded="true" />
+                <element signature="e#17461#17462#0" expanded="true" />
+                <element signature="e#17503#17504#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7575#7576#0" expanded="true" />
-                <element signature="e#7602#7603#0" expanded="true" />
-                <element signature="e#7642#7643#0" expanded="true" />
-                <element signature="e#7674#7675#0" expanded="true" />
-                <element signature="e#10411#10412#0" expanded="true" />
-                <element signature="e#10441#10442#0" expanded="true" />
-                <element signature="e#15158#15159#0" expanded="true" />
-                <element signature="e#15197#15198#0" expanded="true" />
-                <element signature="e#15261#15262#0" expanded="true" />
-                <element signature="e#15317#15318#0" expanded="true" />
-                <element signature="e#15859#15860#0" expanded="true" />
-                <element signature="e#15899#15900#0" expanded="true" />
-                <element signature="e#16451#16452#0" expanded="true" />
-                <element signature="e#16491#16492#0" expanded="true" />
-                <element signature="e#16519#16520#0" expanded="true" />
-                <element signature="e#16546#16547#0" expanded="true" />
-                <element signature="e#16582#16583#0" expanded="true" />
-                <element signature="e#16617#16618#0" expanded="true" />
-                <element signature="e#16670#16671#0" expanded="true" />
-                <element signature="e#16718#16719#0" expanded="true" />
-                <element signature="e#16845#16846#0" expanded="true" />
-                <element signature="e#16876#16877#0" expanded="true" />
-                <element signature="e#16921#16922#0" expanded="true" />
-                <element signature="e#16961#16962#0" expanded="true" />
-                <element signature="e#16993#16994#0" expanded="true" />
-                <element signature="e#17024#17025#0" expanded="true" />
-                <element signature="e#17069#17070#0" expanded="true" />
-                <element signature="e#17109#17110#0" expanded="true" />
-                <element signature="e#17142#17143#0" expanded="true" />
-                <element signature="e#17174#17175#0" expanded="true" />
-                <element signature="e#17221#17222#0" expanded="true" />
-                <element signature="e#17263#17264#0" expanded="true" />
-                <element signature="e#17295#17296#0" expanded="true" />
-                <element signature="e#17326#17327#0" expanded="true" />
-                <element signature="e#17371#17372#0" expanded="true" />
-                <element signature="e#17411#17412#0" expanded="true" />
-                <element signature="e#17448#17449#0" expanded="true" />
-                <element signature="e#17483#17484#0" expanded="true" />
-                <element signature="e#17537#17538#0" expanded="true" />
-                <element signature="e#17585#17586#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,40 +209,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Brak danych dla księgi</find>
-      <find>wyników (strona</find>
-      <find>recordsCount</find>
-      <find>140</find>
-      <find>cont</find>
-      <find>setContent</find>
-      <find>Data przecz.</find>
-      <find>edit</find>
-      <find>Akcja</find>
+      <find>width</find>
       <find>test=</find>
-      <find>isAdmin()</find>
-      <find>removeId</find>
-      <find>Akcja............</find>
-      <find>remove</find>
-      <find>jako</find>
-      <find>zalogowany</find>
-      <find>finally</find>
-      <find>length</find>
-      <find>Akcja...........</find>
-      <find>readYesId</find>
-      <find>Wyloguj</find>
-      <find>WasRead</find>
-      <find>get</find>
-      <find>logger.</find>
-      <find>getVol</find>
-      <find>Witaj</find>
-      <find>user</find>
-      <find>volume</find>
-      <find>Wybra</find>
-      <find>sess</find>
+      <find>R\.</find>
+      <find>float:</find>
+      <find>table</find>
+      <find>sf_admin_container</find>
+      <find>pink</find>
+      <find>content</find>
+      <find>Wybierz</find>
+      <find>menu</find>
+      <find>href</find>
+      <find>Wybierz księgę</find>
+      <find>menu_list</find>
+      <find>submenu</find>
+      <find>tab</find>
+      <find>menu1</find>
+      <find>head</find>
+      <find>528</find>
+      <find>530</find>
+      <find>100</find>
+      <find>53</find>
+      <find>replace</find>
+      <find>volume.ma</find>
+      <find>getLatest</find>
+      <find>edit</find>
+      <find>throw</find>
+      <find>matches</find>
+      <find>newsLookupService</find>
+      <find>LoginDAO: validate:</find>
+      <find>LoginBean: isAdmin</find>
     </findStrings>
     <replaceStrings>
       <replace>listManager</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -207,26 +259,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/jpa/News.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/beans/ListManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/ListManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/ListManager.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.xhtml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/util/DataConnect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/read.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/edit.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/list.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/list.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" />
       </list>
     </option>
@@ -255,16 +307,19 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="565" />
-    <option name="y" value="55" />
-    <option name="width" value="1830" />
-    <option name="height" value="933" />
+    <option name="x" value="21" />
+    <option name="y" value="16" />
+    <option name="width" value="1850" />
+    <option name="height" value="1002" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -414,9 +469,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -666,15 +719,20 @@
       <workItem from="1547497764402" duration="10218000" />
       <workItem from="1547541840685" duration="13855000" />
       <workItem from="1547558462698" duration="4806000" />
-      <workItem from="1547576005573" duration="3858000" />
+      <workItem from="1547576005573" duration="4405000" />
+      <workItem from="1547581352805" duration="975000" />
+      <workItem from="1547800360992" duration="5957000" />
+      <workItem from="1547925649351" duration="12645000" />
+      <workItem from="1547971223208" duration="2846000" />
+      <workItem from="1547974614621" duration="5876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269256000" />
+    <option name="totallyTimeSpent" value="298102000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="452" y="44" width="1464" height="746" extended-state="0" />
+    <frame x="17" y="13" width="1480" height="801" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -691,15 +749,15 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40472442" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.35389134" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.35239568" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32868218" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40493467" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.54684836" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19586894" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44548288" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.54591835" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27042255" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32895887" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -712,6 +770,43 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.098513015" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.12191582" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26893353" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.54591835" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="7" weight="0.06382979" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32868218" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Maven Projects" order="11" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.098513015" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27042255" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.35239568" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="CDI" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.10730594" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40472442" />
+      <window_info anchor="right" id="Bean Validation" order="12" weight="0.32895887" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -721,7 +816,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -755,70 +850,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4131">
-          <caret line="243" column="25" lean-forward="true" selection-start-line="243" selection-start-column="25" selection-end-line="243" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7575#7576#0" expanded="true" />
-            <element signature="e#7602#7603#0" expanded="true" />
-            <element signature="e#7642#7643#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#10411#10412#0" expanded="true" />
-            <element signature="e#10441#10442#0" expanded="true" />
-            <element signature="e#15158#15159#0" expanded="true" />
-            <element signature="e#15197#15198#0" expanded="true" />
-            <element signature="e#15261#15262#0" expanded="true" />
-            <element signature="e#15317#15318#0" expanded="true" />
-            <element signature="e#15859#15860#0" expanded="true" />
-            <element signature="e#15899#15900#0" expanded="true" />
-            <element signature="e#16451#16452#0" expanded="true" />
-            <element signature="e#16491#16492#0" expanded="true" />
-            <element signature="e#16519#16520#0" expanded="true" />
-            <element signature="e#16546#16547#0" expanded="true" />
-            <element signature="e#16582#16583#0" expanded="true" />
-            <element signature="e#16617#16618#0" expanded="true" />
-            <element signature="e#16670#16671#0" expanded="true" />
-            <element signature="e#16718#16719#0" expanded="true" />
-            <element signature="e#16845#16846#0" expanded="true" />
-            <element signature="e#16876#16877#0" expanded="true" />
-            <element signature="e#16921#16922#0" expanded="true" />
-            <element signature="e#16961#16962#0" expanded="true" />
-            <element signature="e#16993#16994#0" expanded="true" />
-            <element signature="e#17024#17025#0" expanded="true" />
-            <element signature="e#17069#17070#0" expanded="true" />
-            <element signature="e#17109#17110#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17174#17175#0" expanded="true" />
-            <element signature="e#17221#17222#0" expanded="true" />
-            <element signature="e#17263#17264#0" expanded="true" />
-            <element signature="e#17295#17296#0" expanded="true" />
-            <element signature="e#17326#17327#0" expanded="true" />
-            <element signature="e#17371#17372#0" expanded="true" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17448#17449#0" expanded="true" />
-            <element signature="e#17483#17484#0" expanded="true" />
-            <element signature="e#17537#17538#0" expanded="true" />
-            <element signature="e#17585#17586#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/util/DataConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -908,49 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7575#7576#0" expanded="true" />
-            <element signature="e#7602#7603#0" expanded="true" />
-            <element signature="e#7642#7643#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#10411#10412#0" expanded="true" />
-            <element signature="e#10441#10442#0" expanded="true" />
-            <element signature="e#15158#15159#0" expanded="true" />
-            <element signature="e#15197#15198#0" expanded="true" />
-            <element signature="e#15261#15262#0" expanded="true" />
-            <element signature="e#15317#15318#0" expanded="true" />
-            <element signature="e#15859#15860#0" expanded="true" />
-            <element signature="e#15899#15900#0" expanded="true" />
-            <element signature="e#16451#16452#0" expanded="true" />
-            <element signature="e#16491#16492#0" expanded="true" />
-            <element signature="e#16519#16520#0" expanded="true" />
-            <element signature="e#16546#16547#0" expanded="true" />
-            <element signature="e#16582#16583#0" expanded="true" />
-            <element signature="e#16617#16618#0" expanded="true" />
-            <element signature="e#16670#16671#0" expanded="true" />
-            <element signature="e#16718#16719#0" expanded="true" />
-            <element signature="e#16845#16846#0" expanded="true" />
-            <element signature="e#16876#16877#0" expanded="true" />
-            <element signature="e#16921#16922#0" expanded="true" />
-            <element signature="e#16961#16962#0" expanded="true" />
-            <element signature="e#16993#16994#0" expanded="true" />
-            <element signature="e#17024#17025#0" expanded="true" />
-            <element signature="e#17069#17070#0" expanded="true" />
-            <element signature="e#17109#17110#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17174#17175#0" expanded="true" />
-            <element signature="e#17221#17222#0" expanded="true" />
-            <element signature="e#17263#17264#0" expanded="true" />
-            <element signature="e#17295#17296#0" expanded="true" />
-            <element signature="e#17326#17327#0" expanded="true" />
-            <element signature="e#17371#17372#0" expanded="true" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17448#17449#0" expanded="true" />
-            <element signature="e#17483#17484#0" expanded="true" />
-            <element signature="e#17537#17538#0" expanded="true" />
-            <element signature="e#17585#17586#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,13 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/util/SessionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/util/DataConnect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1321">
@@ -1061,43 +1042,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="355" column="17" selection-start-line="355" selection-start-column="17" selection-end-line="355" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="371" column="1" lean-forward="true" selection-start-line="371" selection-start-column="1" selection-end-line="371" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1108,113 +1056,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.10/jsf-api-2.2.10.jar!/javax/faces/context/ExternalContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="148">
+          <caret line="256" column="18" selection-start-line="256" selection-start-column="18" selection-end-line="256" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.10/jsf-api-2.2.10.jar!/javax/faces/context/FacesContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="51">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="71" lean-forward="true" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/http/HttpSession.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="714">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7575#7576#0" expanded="true" />
-            <element signature="e#7602#7603#0" expanded="true" />
-            <element signature="e#7642#7643#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#10411#10412#0" expanded="true" />
-            <element signature="e#10441#10442#0" expanded="true" />
-            <element signature="e#15158#15159#0" expanded="true" />
-            <element signature="e#15197#15198#0" expanded="true" />
-            <element signature="e#15261#15262#0" expanded="true" />
-            <element signature="e#15317#15318#0" expanded="true" />
-            <element signature="e#15859#15860#0" expanded="true" />
-            <element signature="e#15899#15900#0" expanded="true" />
-            <element signature="e#16451#16452#0" expanded="true" />
-            <element signature="e#16491#16492#0" expanded="true" />
-            <element signature="e#16519#16520#0" expanded="true" />
-            <element signature="e#16546#16547#0" expanded="true" />
-            <element signature="e#16582#16583#0" expanded="true" />
-            <element signature="e#16617#16618#0" expanded="true" />
-            <element signature="e#16670#16671#0" expanded="true" />
-            <element signature="e#16718#16719#0" expanded="true" />
-            <element signature="e#16845#16846#0" expanded="true" />
-            <element signature="e#16876#16877#0" expanded="true" />
-            <element signature="e#16921#16922#0" expanded="true" />
-            <element signature="e#16961#16962#0" expanded="true" />
-            <element signature="e#16993#16994#0" expanded="true" />
-            <element signature="e#17024#17025#0" expanded="true" />
-            <element signature="e#17069#17070#0" expanded="true" />
-            <element signature="e#17109#17110#0" expanded="true" />
-            <element signature="e#17142#17143#0" expanded="true" />
-            <element signature="e#17174#17175#0" expanded="true" />
-            <element signature="e#17221#17222#0" expanded="true" />
-            <element signature="e#17263#17264#0" expanded="true" />
-            <element signature="e#17295#17296#0" expanded="true" />
-            <element signature="e#17326#17327#0" expanded="true" />
-            <element signature="e#17371#17372#0" expanded="true" />
-            <element signature="e#17411#17412#0" expanded="true" />
-            <element signature="e#17448#17449#0" expanded="true" />
-            <element signature="e#17483#17484#0" expanded="true" />
-            <element signature="e#17537#17538#0" expanded="true" />
-            <element signature="e#17585#17586#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="5270">
+          <caret line="310" column="125" selection-start-line="310" selection-start-column="124" selection-end-line="310" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/util/SessionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1223,22 +1127,141 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="986">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template_nomenu.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        <state relative-caret-position="-148" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="-391">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1504">
+          <caret line="456" column="7" selection-start-line="456" selection-start-column="7" selection-end-line="456" selection-end-column="7" />
+          <folding>
+            <element signature="e#7653#7654#0" expanded="true" />
+            <element signature="e#7682#7683#0" expanded="true" />
+            <element signature="e#7815#7816#0" expanded="true" />
+            <element signature="e#7842#7843#0" expanded="true" />
+            <element signature="e#7882#7883#0" expanded="true" />
+            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#10651#10652#0" expanded="true" />
+            <element signature="e#10681#10682#0" expanded="true" />
+            <element signature="e#15398#15399#0" expanded="true" />
+            <element signature="e#15437#15438#0" expanded="true" />
+            <element signature="e#15501#15502#0" expanded="true" />
+            <element signature="e#15557#15558#0" expanded="true" />
+            <element signature="e#16099#16100#0" expanded="true" />
+            <element signature="e#16139#16140#0" expanded="true" />
+            <element signature="e#16691#16692#0" expanded="true" />
+            <element signature="e#16731#16732#0" expanded="true" />
+            <element signature="e#16759#16760#0" expanded="true" />
+            <element signature="e#16786#16787#0" expanded="true" />
+            <element signature="e#16822#16823#0" expanded="true" />
+            <element signature="e#16857#16858#0" expanded="true" />
+            <element signature="e#16910#16911#0" expanded="true" />
+            <element signature="e#16958#16959#0" expanded="true" />
+            <element signature="e#17085#17086#0" expanded="true" />
+            <element signature="e#17116#17117#0" expanded="true" />
+            <element signature="e#17161#17162#0" expanded="true" />
+            <element signature="e#17201#17202#0" expanded="true" />
+            <element signature="e#17233#17234#0" expanded="true" />
+            <element signature="e#17264#17265#0" expanded="true" />
+            <element signature="e#17309#17310#0" expanded="true" />
+            <element signature="e#17349#17350#0" expanded="true" />
+            <element signature="e#17382#17383#0" expanded="true" />
+            <element signature="e#17414#17415#0" expanded="true" />
+            <element signature="e#17461#17462#0" expanded="true" />
+            <element signature="e#17503#17504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1519#1520#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#5749#5750#0" expanded="true" />
+            <element signature="e#5777#5778#0" expanded="true" />
+            <element signature="e#5816#5817#0" expanded="true" />
+            <element signature="e#5850#5851#0" expanded="true" />
+            <element signature="e#5884#5885#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5960#5961#0" expanded="true" />
+            <element signature="e#5998#5999#0" expanded="true" />
+            <element signature="e#6036#6037#0" expanded="true" />
+            <element signature="e#6070#6071#0" expanded="true" />
+            <element signature="e#6124#6125#0" expanded="true" />
+            <element signature="e#6170#6171#0" expanded="true" />
+            <element signature="e#6203#6204#0" expanded="true" />
+            <element signature="e#6232#6233#0" expanded="true" />
+            <element signature="e#6276#6277#0" expanded="true" />
+            <element signature="e#6312#6313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

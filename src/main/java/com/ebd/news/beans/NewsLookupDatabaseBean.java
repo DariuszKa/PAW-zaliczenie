@@ -14,7 +14,6 @@ import com.ebd.news.jpa.News;
 
 @ManagedBean(eager = true)
 @ApplicationScoped
-//public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
 public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
 
     private static final long serialVersionUID = -5442331602203781978L;
@@ -29,17 +28,16 @@ public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
         logger.info("NewsLookupDatabaseBean bean created");
     }
 
-    public NewsBean getNewsBean() {
+    /*public NewsBean getNewsBean() {
         return newsBean;
     }
 
     public void setNewsBean(NewsBean newsBean) {
         this.newsBean = newsBean;
-    }
+    }*/
 
     @Override
     public List<News> getAllNews() {
-        //return newsBean.getLatesvalue = tNews(0);
         return newsBean.getLatestNews(0);
     }
 
@@ -67,11 +65,6 @@ public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
     @Override
     public boolean persist(News news) {
         return newsBean.persist(news);
-    }
-
-    @Override
-    public boolean remove(int id) {
-        return newsBean.remove(id);
     }
 
 }
