@@ -1,5 +1,6 @@
 package com.ebd.news.beans;
 
+import com.ebd.login.beans.Log;
 import com.ebd.login.util.DataConnect;
 import com.ebd.news.jpa.News;
 import com.ebd.login.beans.LoginBean;
@@ -21,6 +22,7 @@ import java.util.logging.Logger;
 @RequestScoped
 public class NewsManager implements Serializable {
     private static final long serialVersionUID = 3754037223174977077L;
+    private static Log log = new Log();
     private static final int resultPerPage = 10;
 
     private List<News> allNewsList = new ArrayList<>();
@@ -34,7 +36,7 @@ public class NewsManager implements Serializable {
 
     private String wasRead;
 
-    private Logger logger = Logger.getLogger("PGE-WEB");
+    //private Logger logger = Logger.getLogger("PGE-WEB");
 
     @ManagedProperty(value="#{newsLookupDatabaseBean}")
     private NewsLookupDatabaseBean newsLookupService;
@@ -46,23 +48,23 @@ public class NewsManager implements Serializable {
     private String tableListCaption = "Brak rekordów do wyświetlenia";
 
     public NewsManager() {
-        logger.info("NewsManager bean created.");
+        log.info("NewsManager bean created.");
 
         Connection connection = DataConnect.getConnection();
         if(connection==null)
-            logger.warning("NewsManager: connection is null!");
+            log.warning("NewsManager: connection is null!");
         else {
-            logger.info("NewsManager: connection is NOT null");
+            log.info("NewsManager: connection is NOT null");
             try {
                 Statement stmt = connection.createStatement();
                 ResultSet rs = stmt.executeQuery("Select * From bible");
-                System.out.println("NewsManager: Columns in the table: " + rs.getMetaData().getTableName(1));
+                log.fine("NewsManager: Columns in the table: " + rs.getMetaData().getTableName(1));
                 int columnCount = rs.getMetaData().getColumnCount();
-                System.out.println("NewsManager: columnCount=" + columnCount);
+                log.fine("NewsManager: columnCount=" + columnCount);
                 for (int i = 1; i <= columnCount; i++) {
                     System.out.print(rs.getMetaData().getColumnName(i) + " ");
                 }
-                System.out.println();
+                //System.out.println();
                 bibleMap.clear();
                 while (rs.next()) {
                     /*for (int i = 1; i <= 1; i++)
@@ -72,39 +74,39 @@ public class NewsManager implements Serializable {
                     bibleMap.put(rs.getString(2), rs.getString(3));
                 }
             } catch (Exception e) {
-                logger.warning(" NewsManager: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: rs error: " + e);
-                System.out.println(" NewsManager: error: " + e);
+                log.warning(" NewsManager: rs error: " + e.getMessage());
+                //System.out.println(" NewsManager: rs error: " + e.getMessage());
+                log.warning(" NewsManager: rs error: " + e);
+                //System.out.println(" NewsManager: error: " + e);
             }
-            System.out.println("NewsManager: bibleMap.size()=" + bibleMap.size());
+            log.fine("NewsManager: bibleMap.size()=" + bibleMap.size());
         }
     }
 
     public void createList() {
-        logger.info("NewsManager: createList: connection is NOT null");
+        //logger.info("NewsManager: createList: connection is NOT null");
         //allNewsList.clear();
         //newsList.clear();
         allNewsList = new ArrayList<>();
         newsList = new ArrayList<>();
         Connection connection = DataConnect.getConnection();
         if(connection==null)
-            logger.warning("NewsManager: createList: connection is null!");
+            log.warning("NewsManager: createList: connection is null!");
         else {
-            logger.info("NewsManager: createList: connection is NOT null");
+            log.info("NewsManager: createList: connection is NOT null");
             try {
                 if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
                     Statement stmt = connection.createStatement();
                     String query = "Select * From " + volume.replace(" ", "");
-                    System.out.println("NewsManager: createList: query = >" + query + "<");
+                    log.fine("NewsManager: createList: query = >" + query + "<");
                     ResultSet rs = stmt.executeQuery(query);
-                    System.out.println("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    log.fine("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
                     int columnCount = rs.getMetaData().getColumnCount();
-                    System.out.println("NewsManager: createList: columnCount=" + columnCount);
+                    log.fine("NewsManager: createList: columnCount=" + columnCount);
                     for (int i = 1; i <= columnCount; i++) {
-                        System.out.print(rs.getMetaData().getColumnName(i) + " ");
+                        log.fine(rs.getMetaData().getColumnName(i) + " ");
                     }
-                    System.out.println();
+                    //System.out.println();
                     //allNewsList.clear();
                     while (rs.next()) {
                     /*for (int i = 1; i <= 2; i++)
@@ -118,9 +120,9 @@ public class NewsManager implements Serializable {
                         News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
                         allNewsList.add(news);
                     }
-                    System.out.println("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
+                    log.fine("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
                     int size = Math.min(allNewsList.size(), resultPerPage);
-                    System.out.println("NewsManager: createList: size=" + size);
+                    log.fine("NewsManager: createList: size=" + size);
                     if(size>0) {
                         newsList = allNewsList.subList(0, size);
                         calculatePages();
@@ -133,12 +135,12 @@ public class NewsManager implements Serializable {
                 }
             } catch (Exception e) {
                 tableListCaption = "Brak danych dla księgi: " + volume;
-                logger.warning(" NewsManager: createList: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: createList: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: createList: rs error: " + e);
-                System.out.println(" NewsManager: createList: error: " + e);
+                log.warning(" NewsManager: createList: rs error: " + e.getMessage());
+                //System.out.println(" NewsManager: createList: rs error: " + e.getMessage());
+                log.warning(" NewsManager: createList: rs error: " + e);
+                //System.out.println(" NewsManager: createList: error: " + e);
             }
-            System.out.println("NewsManager: createList: after newsList.size()=" + newsList.size());
+            log.info("NewsManager: createList: after newsList.size()=" + newsList.size());
         }
     }
 
@@ -194,17 +196,17 @@ public class NewsManager implements Serializable {
 
     public String getVolumeLong() {
         Connection con = DataConnect.getConnection();
-        if(con==null)
-            logger.warning("NewsManager: getVolumeLong: con is null!");
-        else {
-            logger.info("NewsManager: getVolumeLong: con is NOT null");
-            try {
-                Statement stmt = con.createStatement();
-                String query = "Select long_name From bible WHERE short_name='" + volume + "'";
-                System.out.println("NewsManager: getVolumeLong: query = >" + query + "<");
-                logger.info("NewsManager: getVolumeLong: query = >" + query + "<");
-                ResultSet rs = stmt.executeQuery(query);
-                System.out.println("NewsManager: getVolumeLong: There are " + rs.getMetaData().getColumnCount() + " columns in the table: " + rs.getMetaData().getTableName(1));
+            if(con==null)
+                log.warning("NewsManager: getVolumeLong: con is null!");
+            else {
+                log.info("NewsManager: getVolumeLong: con is NOT null");
+                try {
+                    Statement stmt = con.createStatement();
+                    String query = "Select long_name From bible WHERE short_name='" + volume + "'";
+                    //System.out.println("NewsManager: getVolumeLong: query = >" + query + "<");
+                    log.fine("NewsManager: getVolumeLong: query = >" + query + "<");
+                    ResultSet rs = stmt.executeQuery(query);
+                    log.fine("NewsManager: getVolumeLong: There are " + rs.getMetaData().getColumnCount() + " columns in the table: " + rs.getMetaData().getTableName(1));
 
                 /*int columnCount = rs.getMetaData().getColumnCount();
                 System.out.println("NewsManager: setVolume: columnCount=" + columnCount);
@@ -226,18 +228,18 @@ public class NewsManager implements Serializable {
                     allNewsList.add(news);
                 }
                 volumeLong = rs.getString(3);*/
-                if(rs.next()) volumeLong = rs.getString(1);
-                System.out.println("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
-                logger.info("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
+                    if(rs.next()) volumeLong = rs.getString(1);
+                    //System.out.println("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
+                    log.info("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
 
-            } catch (Exception e) {
-                logger.warning(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: getVolumeLong: rs error: " + e);
-                System.out.println(" NewsManager: getVolumeLong: error: " + e);
-            } finally {
-                DataConnect.close(con);
-            }
+                } catch (Exception e) {
+                    log.warning(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
+                    //System.out.println(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
+                    log.warning(" NewsManager: getVolumeLong: rs error: " + e);
+                    //System.out.println(" NewsManager: getVolumeLong: error: " + e);
+                } finally {
+                    DataConnect.close(con);
+                }
 
         }
         return volumeLong;
@@ -251,7 +253,7 @@ public class NewsManager implements Serializable {
     public void setWasRead(String inputStr) {
         String[] inputArr = inputStr.split(";");
         int length = inputArr.length;
-        System.out.println("NewsManager: setWasRead: inputStr=" + inputStr + ". length=" + length);
+        log.info("NewsManager: setWasRead: inputStr=" + inputStr + ". length=" + length);
         //#{news.id};volume;title;true
         try{
             if(length!=5) throw new IllegalArgumentException("NewsManager: setWasRead: wrong inputStr=" + inputStr + ". length=" + length);
@@ -282,7 +284,7 @@ public class NewsManager implements Serializable {
                             "\tt_read timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
                             "\tprimary key (id)\n" +
                             ");";
-                    logger.info("NewsManager: setWasRead: query = " + query);
+                    log.info("NewsManager: setWasRead: query = " + query);
                     ps.executeQuery(query);
 
 
@@ -296,14 +298,15 @@ public class NewsManager implements Serializable {
                 }
 
             } catch (SQLException ex) {
-                System.out.println("NewsManager: Login error -->" + 	ex.getMessage());
+                log.severe("NewsManager: Login error -->" + 	ex.getMessage());
             } finally {
                 DataConnect.close(connection);
             }
 
         } catch(Exception e) {
-            logger.warning(e.getMessage());
-            System.out.println(e);
+            log.severe(e.getMessage());
+            //log.severe(e.printStackTrace());
+            //System.out.println(e);
         }
     }
 
@@ -370,11 +373,11 @@ public class NewsManager implements Serializable {
 
     public List<News> getNewsList() {
         if (newsList != null) {
-            logger.info("NewsManager: getNewsList(): News list size: " + newsList.size());
+            log.fine(user,"NewsManager: getNewsList(): News list size: " + newsList.size() + ". volume=" + volume);
             //System.out.println("NewsManager: getNewsList(): News list size: " + newsList.size());
         }
         else {
-            logger.warning("NewsManager: getNewsList(): News list is NULL!");
+            log.warning(user,"NewsManager: getNewsList(): News list is NULL! volume=" + volume);
             //System.out.println("NewsManager: getNewsList(): News list is NULL!");
         }
         return newsList;
@@ -386,10 +389,10 @@ public class NewsManager implements Serializable {
 
     public Map<String, String> getBibleMap() {
         if (bibleMap != null) {
-            //logger.info("NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
+            log.fine(user,"NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
             //System.out.println("NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
         } else {
-            logger.warning("NewsManager: getBibleMap(): bibleMap is NULL!");
+            log.warning(user,"NewsManager: getBibleMap(): bibleMap is NULL!");
             //System.out.println("NewsManager: getBibleMap(): bibleMap is NULL!");
         }
         return bibleMap;

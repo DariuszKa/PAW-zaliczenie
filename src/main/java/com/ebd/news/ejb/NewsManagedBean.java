@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
-import java.util.logging.Logger;
+//import java.util.logging.Logger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -13,6 +13,7 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import com.ebd.login.beans.Log;
 import com.ebd.login.util.DataConnect;
 import com.ebd.news.beans.*;
 import com.ebd.news.jpa.*;
@@ -20,10 +21,9 @@ import com.ebd.news.jpa.*;
 @ManagedBean
 @SessionScoped
 public class NewsManagedBean implements Serializable {
-
     private static final long serialVersionUID = -7962404280558108365L;
-
-    protected Logger logger = Logger.getLogger("PawNewsExample");
+    private static Log log = new Log();
+    //protected Logger logger = Logger.getLogger("PawNewsExample");
 
     protected News news;
     protected int id;
@@ -37,8 +37,9 @@ public class NewsManagedBean implements Serializable {
 
     public NewsManagedBean() {
         //super();
-        System.out.println("NewsManagedBean bean created...");
-        logger.info("NewsManagedBean bean created...");
+        ///System.out.println("NewsManagedBean bean created...");
+        ///logger.info("NewsManagedBean bean created...");
+        log.fine("NewsManagedBean bean created...");
         news = new News();
     }
 
@@ -63,53 +64,53 @@ public class NewsManagedBean implements Serializable {
     }
 
     public void setId(int id) {
-        System.out.println("NewsManagedBean: setId(int id) started. id=" + id);
+        log.fine("NewsManagedBean: setId(int id) started. id=" + id);
         this.id = id;
-        System.out.println("NewsManagedBean: setId(int id): 1");
+        log.fine("NewsManagedBean: setId(int id): 1");
         if(id==0) {
-            System.out.println("NewsManagedBean: setId(int id): 2");
+            log.fine("NewsManagedBean: setId(int id): 2");
             this.news = null;
             this.title = 0;
             this.content = "";
             this.description = "";
         }
         if (this.newsLookupService != null && id != 0) {
-            System.out.println("NewsManagedBean: setId(int id): 6");
+            log.fine("NewsManagedBean: setId(int id): 6");
             this.news = getNews(id);
-            System.out.println("NewsManagedBean: setId(int id): 7");
+            log.fine("NewsManagedBean: setId(int id): 7");
             if (this.news != null) {
-                System.out.println("NewsManagedBean: setId(int id): 8");
+                log.fine("NewsManagedBean: setId(int id): 8");
                 this.title = this.news.getTitle();
                 this.content = this.news.getContent();
-                System.out.println("NewsManagedBean: setId(int id): 10");
+                log.fine("NewsManagedBean: setId(int id): 10");
             }
-        } else System.out.println("NewsManagedBean: setId(int id): 11");
-        System.out.println("NewsManagedBean: setId(int id) finished. id=" + id);
+        } else log.fine("NewsManagedBean: setId(int id): 11");
+        log.fine("NewsManagedBean: setId(int id) finished. id=" + id);
     }
 
     public News getNews(int id) {
-        logger.info("NewsManagedBean: getNews started. id=" + id);
-        Connection connection = DataConnect.getConnection();
-        if(connection==null) {
-            System.out.println("NewsManagedBean: getNews: connection is null!");
-            logger.warning("NewsManagedBean: getNews: connection is null!");
+        log.fine("NewsManagedBean: getNews started. id=" + id);
+        Connection con = DataConnect.getConnection();
+        if(con==null) {
+            //System.out.println("NewsManagedBean: getNews: connection is null!");
+            log.warning("NewsManagedBean: getNews: connection is null!");
         }
         else {
-            System.out.println("NewsManagedBean: getNews: connection is NOT null.");
-            logger.info("NewsManagedBean: getNews: connection is NOT null.");
+            //System.out.println("NewsManagedBean: getNews: connection is NOT null.");
+            log.fine("NewsManagedBean: getNews: connection is NOT null.");
             try {
-                Statement stmt = connection.createStatement();
+                Statement stmt = con.createStatement();
                 if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
                     String query = "SELECT * FROM " + volume + " WHERE id=" + id;
-                    System.out.println("NewsManagedBean: getNews: query = >" + query + "<");
+                    log.fine("NewsManagedBean: getNews: query = >" + query + "<");
                     ResultSet rs = stmt.executeQuery(query);
-                    System.out.println("NewsManagedBean: getNews: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    log.fine("NewsManagedBean: getNews: Columns in the table: " + rs.getMetaData().getTableName(1));
                     int columnCount = rs.getMetaData().getColumnCount();
-                    System.out.println("NewsManagedBean: getNews: columnCount=" + columnCount);
+                    log.fine("NewsManagedBean: getNews: columnCount=" + columnCount);
                     for (int i = 1; i <= columnCount; i++) {
-                        System.out.print(rs.getMetaData().getColumnName(i) + " ");
+                        log.fine(rs.getMetaData().getColumnName(i) + " ");
                     }
-                    System.out.println();
+                    //System.out.println();
                     while (rs.next()) {
                         /*for (int i = 1; i <= 2; i++)
                             System.out.print(rs.getInt(i) + "\t");
@@ -132,10 +133,12 @@ public class NewsManagedBean implements Serializable {
                     throw new IllegalArgumentException(" volume='" + volume + "'");
                 }
             } catch (Exception e) {
-                logger.warning("NewsManagedBean: getNews: rs error: " + e.getMessage());
-                System.out.println("NewsManagedBean: getNews: " + e.getMessage());
-                logger.warning("NewsManagedBean: getNews: " + e);
-                System.out.println("NewsManagedBean: getNews: " + e);
+                log.warning("NewsManagedBean: getNews: rs error: " + e.getMessage());
+                //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
+                log.warning("NewsManagedBean: getNews: " + e);
+                //System.out.println("NewsManagedBean: getNews: " + e);
+            } finally {
+                DataConnect.close(con);
             }
         }
         return null;
@@ -174,15 +177,27 @@ public class NewsManagedBean implements Serializable {
     }
 
     public String update() {
-        FacesContext context = FacesContext.getCurrentInstance();
-        this.news.setUpdatedAt(new Date());
-        this.news.setContent(content);
-        this.news.setTitle(title);
-        if (this.newsLookupService.merge(this.news)) {
-            context.addMessage(null, new FacesMessage("Edycja newsa przebiegła poprawnie."));
+        Connection con = DataConnect.getConnection();
+        if(con==null) {
+            log.warning("NewsManagedBean: update: connection is null!");
         }
         else {
-            context.addMessage(null, new FacesMessage("Błąd podczas edycji."));
+            log.fine("NewsManagedBean: update: connection is NOT null.");
+            try {
+                Statement stmt = con.createStatement();
+                if (! volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) throw new IllegalArgumentException("volume='" + volume + "'");
+                    String update = "UPDATE " + volume + " SET content = '" + content + "' WHERE id=" + id;
+                    log.info("NewsManagedBean: update: update = >" + update + "<");
+                    int result = stmt.executeUpdate(update);
+                    log.info("NewsManagedBean: getNews: result=" + result);
+            } catch (Exception e) {
+                log.warning("NewsManagedBean: getNews: rs error: " + e.getMessage());
+                //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
+                log.warning("NewsManagedBean: getNews: " + e);
+                //System.out.println("NewsManagedBean: getNews: " + e);
+            } finally {
+                DataConnect.close(con);
+            }
         }
         return null;
     }

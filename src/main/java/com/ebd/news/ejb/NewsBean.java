@@ -11,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.Query;
 
+import com.ebd.login.beans.Log;
 import com.ebd.login.util.DataConnect;
 import com.ebd.news.jpa.News;
 
@@ -20,9 +21,10 @@ import java.sql.ResultSet;
 
 @Stateless(mappedName = "NewsBean")
 public class NewsBean {
+    private static Log log = new Log();
     public static final int DEFAULT_COUNT = 20;
 
-    private Logger logger = Logger.getLogger("PGE-WEB");
+    //private Logger logger = Logger.getLogger("PGE-WEB");
 
     private String volume;
 
@@ -30,22 +32,22 @@ public class NewsBean {
     EntityManagerFactory emf;
 
     public NewsBean() {
-        System.out.println("'NewsBean' created...");
-        logger.info("'NewsBean' created...");
+        //System.out.println("'NewsBean' created...");
+        log.fine("'NewsBean' created...");
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public boolean persist(Object o) {
         EntityManager entityManager = emf.createEntityManager();
         try {
-            logger.info("Saving object: " + o);
+            log.fine("Saving object: " + o);
             entityManager.persist(o);
-            logger.info("Object saved: " + o);
+            //log.info("Object saved: " + o);
             return true;
         } catch (Exception e) {
-            logger.severe("NewsBean::persist: Error writing to DB: " + e);
-            logger.severe("" + e.fillInStackTrace());
-            System.out.println("NewsBean::persist: Error writing to DB: " + e);
+            log.severe("NewsBean::persist: Error writing to DB: " + e.getMessage());
+            log.severe("" + e.fillInStackTrace());
+            //System.out.println("NewsBean::persist: Error writing to DB: " + e);
             return false;
         }
     }
@@ -70,16 +72,17 @@ public class NewsBean {
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public boolean merge(Object o) {
+        log.info("NewsBean: merge" + o);
         EntityManager entityManager = emf.createEntityManager();
         try {
-            logger.info("Updating object: " + o);
+            log.info("Updating object: " + o);
             entityManager.merge(o);
-            logger.info("Object updated: ");
+            log.info("Object updated: ");
             return true;
         } catch (Exception e) {
-            logger.severe("NewsBean::merge: Error writing to DB: " + e);
-            logger.severe("" + e.fillInStackTrace());
-            System.out.println("NewsBean::merge: Error writing to DB: " + e);
+            log.severe("NewsBean::merge: Error writing to DB: " + e);
+            log.severe("" + e.fillInStackTrace());
+            //System.out.println("NewsBean::merge: Error writing to DB: " + e);
             return false;
         }
     }
@@ -96,8 +99,8 @@ public class NewsBean {
                 query.setMaxResults(count);
             return query.getResultList();
         } catch (Exception e) {
-            logger.warning("NewsBean: getLatestNews: error while executing query: " + e);
-            System.out.println("NewsBean: getLatestNews: error while executing query: " + e);
+            log.warning("NewsBean: getLatestNews: error while executing query: " + e);
+            //System.out.println("NewsBean: getLatestNews: error while executing query: " + e);
         }
         return null;
     }
@@ -105,26 +108,26 @@ public class NewsBean {
     //@TransactionAttribute(TransactionAttributeType.REQUIRED)
     public News getNews(int id) {
         System.out.println("NewsBean: getNews started. id=" + id);
-        logger.info("NewsBean: getNews started. id=" + id);
+        log.info("NewsBean: getNews started. id=" + id);
         News news = null;
         Connection con = null;
         try {
-            System.out.println("NewsBean: getNews: before getConnection");
+            log.fine("NewsBean: getNews: before getConnection");
             con = DataConnect.getConnection();
             if(con==null) {
-                logger.warning("NewsBean: getNews: con is null!");
-                System.out.println("NewsBean: getNews: con is null!");
+                log.warning("NewsBean: getNews: con is null!");
+                //System.out.println("NewsBean: getNews: con is null!");
             }
             else{
                 if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
-                    logger.info("NewsBean: getNews: con is NOT null!");
-                    System.out.println("NewsBean: getNews: con is NOT null!");
+                    log.info("NewsBean: getNews: con is NOT null!");
+                    //System.out.println("NewsBean: getNews: con is NOT null!");
                     //System.out.println("NewsBean: getNews: id=" + id);
                     /*EntityManager em = emf.createEntityManager();
                     return em.find(News.class, id);*/
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("Select * FROM " + volume.replace(" ", "") + " WHERE id=" + id);
-                    System.out.println("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
+                    log.info("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
                     news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
 
                 } else {
@@ -133,10 +136,10 @@ public class NewsBean {
             }
             con.close();
         } catch (Exception e) {
-            System.out.println(" NewsBean: rs error: " + e.getMessage());
-            System.out.println(" NewsBean: rs error: " + e);
-            logger.warning(" NewsBean: rs error: " + e.getMessage());
-            logger.warning(" NewsBean: rs error: " + e);
+            //System.out.println(" NewsBean: rs error: " + e.getMessage());
+            //System.out.println(" NewsBean: rs error: " + e);
+            log.severe(" NewsBean: rs error: " + e.getMessage());
+            log.severe(" NewsBean: rs error: " + e);
             //return null;
         } finally {
             DataConnect.close(con);

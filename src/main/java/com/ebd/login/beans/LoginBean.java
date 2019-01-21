@@ -1,7 +1,7 @@
 package com.ebd.login.beans;
 
 import java.io.Serializable;
-import java.util.logging.Logger;
+//import java.util.logging.Logger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -16,11 +16,13 @@ import com.ebd.login.dao.LoginDAO;
 @SessionScoped
 public class LoginBean implements Serializable {
     private static final long serialVersionUID = 1094801825228386363L;
+    private static Log log = new Log();
     private String pwd;
     private String msg;
     private String user;
+
     //private HttpSession session;
-    private Logger logger = Logger.getLogger("PGE-WEB");
+    ///private Logger logger = Logger.getLogger("PGE-WEB");
 
     public String getPwd() {
         return pwd;
@@ -63,13 +65,15 @@ public class LoginBean implements Serializable {
     public String validateUsernamePassword() {
         boolean valid = LoginDAO.validate(user, pwd);
         if(valid) {
-            logger.info("Authorization is valid for '" + getUser() + "'");
+            ///logger.info("Authorization is valid for '" + getUser() + "'");
+            log.info(getUser(),"Authorization is valid for '" + getUser() + "'");
             HttpSession session = SessionUtils.getSession();
             //session = SessionUtils.getSession();
             session.setAttribute("username", user);
             return "list";
         } else {
-            logger.warning("Authorization was NOT valid for " + getUser());
+            //logger.warning("Authorization was NOT valid for '" + getUser() + "'");
+            log.warning(getUser(),"Authorization was NOT valid for '" + getUser() + "'");
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN, "Zły login lub hasło",
                             "Podaj prawidłowy login oraz hasło"));
@@ -79,7 +83,7 @@ public class LoginBean implements Serializable {
 
     public String logout() {
         HttpSession session = SessionUtils.getSession();
-        logger.info("logout for '" + getUser() + "' '" + session.getAttribute("username") + "'");
+        log.info(getUser(),"logout for '" + getUser() + "' '" + session.getAttribute("username") + "'");
         session.invalidate();
         return "index";
     }

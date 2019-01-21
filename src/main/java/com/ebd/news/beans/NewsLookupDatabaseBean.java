@@ -8,6 +8,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
+import com.ebd.login.beans.Log;
 import com.ebd.news.ejb.NewsBean;
 import com.ebd.news.jpa.News;
 
@@ -17,15 +18,15 @@ import com.ebd.news.jpa.News;
 public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
 
     private static final long serialVersionUID = -5442331602203781978L;
-
-    protected Logger logger = Logger.getLogger("PawNewsExample");
+    private static Log log = new Log();
+    //protected Logger logger = Logger.getLogger("PawNewsExample");
 
     @EJB(name = "NewsBean")
     private NewsBean newsBean;
 
     public NewsLookupDatabaseBean() {
-        System.out.println("NewsLookupDatabaseBean bean created");
-        logger.info("NewsLookupDatabaseBean bean created");
+        //System.out.println("NewsLookupDatabaseBean bean created");
+        log.info("NewsLookupDatabaseBean bean created");
     }
 
     /*public NewsBean getNewsBean() {
@@ -44,16 +45,16 @@ public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
     @Override
     public News getNews(int id) {
         // TODO Auto-generated method stub
-        System.out.println("NewsLookupDatabaseBean: getNews started. id=" + id);
-        logger.info("NewsLookupDatabaseBean: getNews started. id=" + id);
+        //System.out.println("NewsLookupDatabaseBean: getNews started. id=" + id);
+        log.info("NewsLookupDatabaseBean: getNews started. id=" + id);
         News n = newsBean.getNews(id);
-        System.out.println("NewsLookupDatabaseBean: getNews: n==null = " + (n==null));
-        logger.info("NewsLookupDatabaseBean: getNews: n==null = " + (n==null));
+        //System.out.println("NewsLookupDatabaseBean: getNews: n==null = " + (n==null));
+        log.info("NewsLookupDatabaseBean: getNews: n==null = " + (n==null));
         if (n == null)
-            logger.info("NewsLookupDatabaseBean returning null for id=" + id);
+            log.info("NewsLookupDatabaseBean returning null for id=" + id);
         else
-            logger.info("News " + id + "title: " + n.getTitle());
-        logger.info("NewsLookupDatabaseBean: getNews finished. id=" + id);
+            log.info("News " + id + "title: " + n.getTitle());
+        //log.info("NewsLookupDatabaseBean: getNews finished. id=" + id);
         return n;
     }
 

@@ -37,10 +37,10 @@
             <div id="main">
                 <c:choose>
                     <c:when test="#{newsManager.volume != null}">
-                        Wybrano księgę: <h:outputText value="#{newsManager.volume}"/>
+                        Wybrano księgę: <B><h:outputText value="#{newsManager.volume}"/></B>
                     </c:when>
                     <c:otherwise>
-                        Wersja Beta serwisu.
+                        Jeszcze nie wybrano księgi.
                     </c:otherwise>
                 </c:choose>
                 <div id="menu">

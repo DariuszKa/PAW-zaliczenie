@@ -7,36 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40d48620-83dc-429d-aaef-b80f12ef71e5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/read.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/read.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/beans/LoginBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/dao/LoginDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/dao/LoginDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/filter/LoginAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/login/filter/LoginAuthorizationFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsLookupService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/beans/NewsManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsManagedBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/news/ejb/NewsManagedBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/header.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/templates/template.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EBD/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/edit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EBD/list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/list.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EBD/resources/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/resources/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EBD/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/read.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/read.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/login/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/login/beans/LoginBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/login/dao/LoginDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/login/dao/LoginDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/login/filter/LoginAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/login/filter/LoginAuthorizationFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupDatabaseBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsLookupService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/beans/NewsManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsManagedBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/news/ejb/NewsManagedBean.class" afterDir="false" />
@@ -57,8 +58,8 @@
       <file leaf-file-name="list.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="196">
+              <caret line="101" column="67" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -66,41 +67,20 @@
       <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="95" />
+            <state relative-caret-position="187">
+              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsLookupDatabaseBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state>
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -108,45 +88,46 @@
       <file leaf-file-name="NewsManagedBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="169">
+              <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1246#1247#0" expanded="true" />
                 <element signature="e#1286#1287#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1481#1482#0" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#5749#5750#0" expanded="true" />
-                <element signature="e#5777#5778#0" expanded="true" />
-                <element signature="e#5816#5817#0" expanded="true" />
-                <element signature="e#5850#5851#0" expanded="true" />
-                <element signature="e#5884#5885#0" expanded="true" />
-                <element signature="e#5914#5915#0" expanded="true" />
-                <element signature="e#5960#5961#0" expanded="true" />
-                <element signature="e#5998#5999#0" expanded="true" />
-                <element signature="e#6036#6037#0" expanded="true" />
-                <element signature="e#6070#6071#0" expanded="true" />
-                <element signature="e#6124#6125#0" expanded="true" />
-                <element signature="e#6170#6171#0" expanded="true" />
-                <element signature="e#6203#6204#0" expanded="true" />
-                <element signature="e#6232#6233#0" expanded="true" />
-                <element signature="e#6276#6277#0" expanded="true" />
-                <element signature="e#6312#6313#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="124" column="35" lean-forward="true" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+              <folding>
+                <element signature="e#3087#3088#0" expanded="true" />
+                <element signature="e#3129#3130#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1504">
-              <caret line="456" column="7" selection-start-line="456" selection-start-column="7" selection-end-line="456" selection-end-column="7" />
+            <state relative-caret-position="169">
+              <caret line="233" selection-start-line="233" selection-end-line="233" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#7653#7654#0" expanded="true" />
                 <element signature="e#7682#7683#0" expanded="true" />
                 <element signature="e#7815#7816#0" expanded="true" />
@@ -189,8 +170,8 @@
       <file leaf-file-name="NewsBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="83" />
+            <state relative-caret-position="104">
+              <caret line="75" column="64" lean-forward="true" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,36 +190,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
-      <find>test=</find>
-      <find>R\.</find>
-      <find>float:</find>
-      <find>table</find>
-      <find>sf_admin_container</find>
-      <find>pink</find>
-      <find>content</find>
-      <find>Wybierz</find>
-      <find>menu</find>
-      <find>href</find>
-      <find>Wybierz księgę</find>
-      <find>menu_list</find>
-      <find>submenu</find>
-      <find>tab</find>
-      <find>menu1</find>
-      <find>head</find>
-      <find>528</find>
-      <find>530</find>
-      <find>100</find>
-      <find>53</find>
-      <find>replace</find>
-      <find>volume.ma</find>
-      <find>getLatest</find>
-      <find>edit</find>
-      <find>throw</find>
-      <find>matches</find>
-      <find>newsLookupService</find>
-      <find>LoginDAO: validate:</find>
       <find>LoginBean: isAdmin</find>
+      <find>log.</find>
+      <find>logge</find>
+      <find>Log</find>
+      <find>user</find>
+      <find>log\.</find>
+      <find>System</find>
+      <find>log</find>
+      <find>System.</find>
+      <find>System.out</find>
+      <find>validateUsernamePassword</find>
+      <find>catch</find>
+      <find>System.out.println</find>
+      <find>logger</find>
+      <find>News list size</find>
+      <find>News list size:</find>
+      <find>con is NOT null</find>
+      <find>Aktualizuj</find>
+      <find>h:commandButton</find>
+      <find>&lt;h:commandButton action=&quot;#{loginBean.validateUsernamePassword}&quot; value=&quot;Zaloguj&quot;&gt;&lt;/h:commandButton&gt;</find>
+      <find>update</find>
+      <find>NewsLookupDatabaseBean</find>
+      <find>read</find>
+      <find>select</find>
+      <find>oginBean</find>
+      <find>merge</find>
+      <find>NewsManagedBean: update: Columns in rs</find>
+      <find>\.\...</find>
+      <find>Wybrano księgę:</find>
+      <find>Wybrano</find>
     </findStrings>
     <replaceStrings>
       <replace>listManager</replace>
@@ -264,22 +245,25 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.xhtml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/util/DataConnect.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/read.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/edit.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/list.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LogBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/read.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/edit.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/list.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml" />
       </list>
     </option>
   </component>
@@ -307,10 +291,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="21" />
-    <option name="y" value="16" />
-    <option name="width" value="1850" />
-    <option name="height" value="1002" />
+    <option name="x" value="17" />
+    <option name="width" value="1878" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -318,8 +301,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,6 +384,28 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ebd" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EBD" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebd" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EBD" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ebd" type="462c0819:PsiDirectoryNode" />
               <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -469,7 +473,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -725,14 +730,16 @@
       <workItem from="1547925649351" duration="12645000" />
       <workItem from="1547971223208" duration="2846000" />
       <workItem from="1547974614621" duration="5876000" />
+      <workItem from="1548068107643" duration="18711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298102000" />
+    <option name="totallyTimeSpent" value="316813000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="13" width="1480" height="801" extended-state="0" />
+    <frame x="14" y="0" width="1502" height="840" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -749,15 +756,15 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40472442" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.35239568" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.35114503" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32868218" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44548288" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5917768" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.54591835" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27042255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15603329" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32895887" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -774,7 +781,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.12191582" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26893353" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44548288" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -794,7 +801,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Maven Projects" order="11" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.098513015" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27042255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15211268" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.35239568" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -850,13 +857,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -957,13 +957,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java.delme" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/signup.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar!/javax/persistence/EntityManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1007,13 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/util/DataConnect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1321">
@@ -1042,20 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sun/faces/jsf-api/2.2.10/jsf-api-2.2.10.jar!/javax/faces/context/ExternalContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -1070,24 +1042,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/http/HttpSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1115,67 +1073,176 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template_nomenu.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-148" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/filter/LoginAuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="356">
+          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="95" />
+        <state relative-caret-position="340">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/jpa/News.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="124" column="35" lean-forward="true" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+          <folding>
+            <element signature="e#3087#3088#0" expanded="true" />
+            <element signature="e#3129#3130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/signup.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsLookupDatabaseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1872#1873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="83" />
+        <state relative-caret-position="104">
+          <caret line="75" column="64" lean-forward="true" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="101" column="67" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="51" column="113" selection-start-line="51" selection-start-column="113" selection-end-line="51" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/template.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/beans/NewsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="456" column="7" selection-start-line="456" selection-start-column="7" selection-end-line="456" selection-end-column="7" />
+        <state relative-caret-position="169">
+          <caret line="233" selection-start-line="233" selection-end-line="233" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#7653#7654#0" expanded="true" />
             <element signature="e#7682#7683#0" expanded="true" />
             <element signature="e#7815#7816#0" expanded="true" />
@@ -1210,57 +1277,6 @@
             <element signature="e#17414#17415#0" expanded="true" />
             <element signature="e#17461#17462#0" expanded="true" />
             <element signature="e#17503#17504#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/news/ejb/NewsManagedBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1481#1482#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5777#5778#0" expanded="true" />
-            <element signature="e#5816#5817#0" expanded="true" />
-            <element signature="e#5850#5851#0" expanded="true" />
-            <element signature="e#5884#5885#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5960#5961#0" expanded="true" />
-            <element signature="e#5998#5999#0" expanded="true" />
-            <element signature="e#6036#6037#0" expanded="true" />
-            <element signature="e#6070#6071#0" expanded="true" />
-            <element signature="e#6124#6125#0" expanded="true" />
-            <element signature="e#6170#6171#0" expanded="true" />
-            <element signature="e#6203#6204#0" expanded="true" />
-            <element signature="e#6232#6233#0" expanded="true" />
-            <element signature="e#6276#6277#0" expanded="true" />
-            <element signature="e#6312#6313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
