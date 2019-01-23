@@ -13,6 +13,10 @@
 
 <f:metadata>
     <f:viewParam name="bibleMap" value="#{newsManager.bibleMap}"/>
+
+    <f:viewParam name="volume" value="#{newsManager.volume}"/>
+
+    <f:viewParam name="user" value="#{newsManager.user}"/>
 </f:metadata>
 
 <h:head>
@@ -23,12 +27,13 @@
 <h:body>
 
     <h:form id="menu_form">
-
+        <c:set var="user" value="#{loginBean.user}"/>
         <div id="wrapper">
             <div id="header">
                 <div class="login">
                     Witaj, jesteś zalogowany/a jako
-                    <span class="user_login"> <h:outputText value="#{loginBean.user}"/> </span>
+                    <!-- <span class="user_login"> <h:outputText value="#{loginBean.user}"/> </span> -->
+                    <span class="user_login"> <h:outputText value="${user}"/> </span>
                     <br/>
                     <h:commandLink action="#{loginBean.logout}" value="Wyloguj się!"/>
                 </div>
@@ -38,9 +43,10 @@
                 <c:choose>
                     <c:when test="#{newsManager.volume != null}">
                         Wybrano księgę: <h:outputText value="#{newsManager.volume}"/>
+                        <!-- Uzytkownik: <B><h:outputText value="#{newsManager.user}"/></B> -->
                     </c:when>
                     <c:otherwise>
-                        Wersja Beta serwisu.
+                        Jeszcze nie wybrano księgi.
                     </c:otherwise>
                 </c:choose>
                 <div id="menu">
@@ -49,8 +55,19 @@
                         <div class="head submenu">Stary Testament:</div>
                         <c:forEach items="#{newsManager.bibleMap}" var="entry">
                             <s:if test="#{entry.key=='Mt'}"><div class="head submenu">Nowy Testament:</div></s:if>
-                            <c:set var="str" value="list.xhtml?volume=#{entry.key}"/>
-                            <h:link value="#{entry.key}" outcome="${str}"/>
+                                <!-- <c:set var="str" value="list.xhtml?volume=#{entry.key}"/> -->
+                                <!-- <c:set var="str" value="list.xhtml?user=#{newsManager.user}"/> -->
+                            <!-- <c:set var="str" value="list.xhtml?user=#{newsManager.user}&amp;volume=#{entry.key}"/> -->
+                                <!-- <c:set var="str" value="list.xhtml?volume=#{entry.key}&amp;user=${user}"/> -->
+                                <!-- <c:set var="str" value="list.xhtml?volume=#{entry.key}&amp;user=#{loginBean.user}"/> -->
+                            <!-- <h:link value="#{entry.key}" outcome="${str}"/> -->
+
+
+                            <c:set var="str" value="list.xhtml?volume=#{entry.key}&amp;user="/>
+                            <h:link value="#{entry.key}" outcome="${str}${user}"/>
+
+                            <!-- <c:set var="str" value="list.xhtml?user=#{loginBean.user}&amp;volume=#{entry.key}"/>
+                            <h:link value="#{entry.key}" outcome="${str}"/> -->
                         </c:forEach>
                     </div>
                 </div>

@@ -8,14 +8,11 @@
       xmlns:f="http://java.sun.com/jsf/core">
 
     <p xmlns="http://www.w3.org/1999/xhtml">
-        <!-- Wybrano księgę: <h:outputText value="#{newsManager.volume}"/> -->
         <c:choose>
-            <!-- <c:if test="person==null || person.id==null || person.id==''"> -->
             <c:when test="#{newsManager.volume == null}">
                 Wybierz księgę z menu po lewej stronie.
             </c:when>
             <c:otherwise>
-                <!-- Wybrano księgę <h:outputText value="#{newsManager.volume}"/> -->
                 <h2><h:outputText value="#{newsManager.volumeLong}"/></h2>
             </c:otherwise>
         </c:choose>

@@ -1,5 +1,7 @@
 package com.ebd.login.filter;
 
+import com.ebd.login.beans.Log;
+
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -14,6 +16,7 @@ import javax.servlet.http.HttpSession;
 
 @WebFilter(filterName = "AuthFilter", urlPatterns = { "*.xhtml" })
 public class LoginAuthorizationFilter implements Filter {
+	private static Log log = new Log();
 
 	public LoginAuthorizationFilter() {
 	}
@@ -41,7 +44,7 @@ public class LoginAuthorizationFilter implements Filter {
 			else
 				resp.sendRedirect(reqt.getContextPath() + "/faces/index.xhtml");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			log.severe(e.getMessage());
 		}
 	}
 

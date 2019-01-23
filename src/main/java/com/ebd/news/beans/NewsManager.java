@@ -1,9 +1,12 @@
 package com.ebd.news.beans;
 
+import com.ebd.login.beans.Log;
+import com.ebd.login.dao.LoginDAO;
 import com.ebd.login.util.DataConnect;
 import com.ebd.news.jpa.News;
 import com.ebd.login.beans.LoginBean;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -18,9 +21,11 @@ import java.util.logging.Logger;
 
 
 @ManagedBean
-@RequestScoped
+//@RequestScoped
+@SessionScoped
 public class NewsManager implements Serializable {
     private static final long serialVersionUID = 3754037223174977077L;
+    private static Log log = new Log();
     private static final int resultPerPage = 10;
 
     private List<News> allNewsList = new ArrayList<>();
@@ -34,7 +39,7 @@ public class NewsManager implements Serializable {
 
     private String wasRead;
 
-    private Logger logger = Logger.getLogger("PGE-WEB");
+    //private Logger logger = Logger.getLogger("PGE-WEB");
 
     @ManagedProperty(value="#{newsLookupDatabaseBean}")
     private NewsLookupDatabaseBean newsLookupService;
@@ -46,23 +51,24 @@ public class NewsManager implements Serializable {
     private String tableListCaption = "Brak rekordów do wyświetlenia";
 
     public NewsManager() {
-        logger.info("NewsManager bean created.");
+        log.info("NewsManager bean created.");
 
         Connection connection = DataConnect.getConnection();
         if(connection==null)
-            logger.warning("NewsManager: connection is null!");
+            log.warning("NewsManager: connection is null!");
         else {
-            logger.info("NewsManager: connection is NOT null");
+            log.info("NewsManager: connection is NOT null");
             try {
                 Statement stmt = connection.createStatement();
-                ResultSet rs = stmt.executeQuery("Select * From bible");
-                System.out.println("NewsManager: Columns in the table: " + rs.getMetaData().getTableName(1));
+                ResultSet rs = stmt.executeQuery("SELECT * FROM bible");
+                /*log.fine("NewsManager: Columns in the table: " + rs.getMetaData().getTableName(1));
                 int columnCount = rs.getMetaData().getColumnCount();
-                System.out.println("NewsManager: columnCount=" + columnCount);
-                for (int i = 1; i <= columnCount; i++) {
+                log.fine("NewsManager: columnCount=" + columnCount);*/
+                log.info("NewsManager: There are " + rs.getMetaData().getColumnCount() + " columns in the table: " + rs.getMetaData().getTableName(1));
+                /*for (int i = 1; i <= columnCount; i++) {
                     System.out.print(rs.getMetaData().getColumnName(i) + " ");
                 }
-                System.out.println();
+                System.out.println(); */
                 bibleMap.clear();
                 while (rs.next()) {
                     /*for (int i = 1; i <= 1; i++)
@@ -72,73 +78,83 @@ public class NewsManager implements Serializable {
                     bibleMap.put(rs.getString(2), rs.getString(3));
                 }
             } catch (Exception e) {
-                logger.warning(" NewsManager: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: rs error: " + e);
-                System.out.println(" NewsManager: error: " + e);
+                log.warning(" NewsManager: rs error: " + e.getMessage());
+                //System.out.println(" NewsManager: rs error: " + e.getMessage());
+                log.warning(" NewsManager: rs error: " + e);
+                //System.out.println(" NewsManager: error: " + e);
             }
-            System.out.println("NewsManager: bibleMap.size()=" + bibleMap.size());
+            log.fine("NewsManager: bibleMap.size()=" + bibleMap.size());
         }
     }
 
     public void createList() {
-        logger.info("NewsManager: createList: connection is NOT null");
-        //allNewsList.clear();
-        //newsList.clear();
-        allNewsList = new ArrayList<>();
-        newsList = new ArrayList<>();
-        Connection connection = DataConnect.getConnection();
-        if(connection==null)
-            logger.warning("NewsManager: createList: connection is null!");
+        if(user==null || volume==null) log.severe("NewsManager: createList: user='" + user + "'. volume='" + volume + "'");
         else {
-            logger.info("NewsManager: createList: connection is NOT null");
-            try {
-                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
-                    Statement stmt = connection.createStatement();
-                    String query = "Select * From " + volume.replace(" ", "");
-                    System.out.println("NewsManager: createList: query = >" + query + "<");
-                    ResultSet rs = stmt.executeQuery(query);
-                    System.out.println("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
-                    int columnCount = rs.getMetaData().getColumnCount();
-                    System.out.println("NewsManager: createList: columnCount=" + columnCount);
-                    for (int i = 1; i <= columnCount; i++) {
-                        System.out.print(rs.getMetaData().getColumnName(i) + " ");
+            log.info("NewsManager: createList: user='" + user + "'. volume='" + volume + "'");
+            //allNewsList.clear();
+            //newsList.clear();
+            allNewsList = new ArrayList<>();
+            newsList = new ArrayList<>();
+            Connection connection = DataConnect.getConnection();
+            if (connection == null)
+                log.warning("NewsManager: createList: connection is null!");
+            else {
+                log.info("NewsManager: createList: connection is NOT null");
+                try {
+                    if (volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
+                        Statement stmt = connection.createStatement();
+                        //String query = "Select * From " + volume.replace(" ", "");
+                        String query = "SELECT * FROM _" + volume;
+                        log.info("NewsManager: createList: query = >" + query + "<");
+                        ResultSet rs = stmt.executeQuery(query);
+                        log.fine("NewsManager: createList: Columns in the table: " + rs.getMetaData().getTableName(1));
+                        int columnCount = rs.getMetaData().getColumnCount();
+                        log.fine("NewsManager: createList: columnCount=" + columnCount);
+                        for (int i = 1; i <= columnCount; i++) {
+                            log.fine(rs.getMetaData().getColumnName(i) + " ");
+                        }
+                        //System.out.println();
+                        //allNewsList.clear();
+                        while (rs.next()) {
+                        /*for (int i = 1; i <= 2; i++)
+                            System.out.print(rs.getInt(i) + "\t");
+                        for (int i = 3; i <= 4; i++)
+                            System.out.print(rs.getString(i) + "\t");
+                        for (int i = 5; i <= 6; i++)
+                            System.out.print(rs.getTimestamp(i) + "\t");
+                        /*for (int i = 5; i < 6; i++)
+                            System.out.print(rs.getTimestamp(i) + "\t");*/
+
+                            int chapter = rs.getInt(2);
+                            String queryUser = "SELECT was_read FROM zzzzur__" + user + " WHERE chapter=" + chapter;
+                            log.info("NewsManager: createList: queryUser = >" + queryUser + "<");
+                            Statement stmtUser = connection.createStatement();
+                            ResultSet rsUser = stmtUser.executeQuery(queryUser);
+                            String wasRead = rsUser.next() ? "Y" : "N";
+                            //                  id     title/chapter             content       was_read
+                            News news = new News(rs.getInt(1), chapter, rs.getString(3), wasRead);
+                            allNewsList.add(news);
+                        }
+                        log.fine("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
+                        int size = Math.min(allNewsList.size(), resultPerPage);
+                        log.fine("NewsManager: createList: size=" + size);
+                        if (size > 0) {
+                            newsList = allNewsList.subList(0, size);
+                            calculatePages();
+                            generateTableCaption();
+                        } else
+                            tableListCaption = "brak rekordów!";
+                    } else {
+                        log.warning(user,"NewsManager: createList: volume='" + volume + "'");
+                        throw new IllegalArgumentException(" volume='" + volume + "'");
                     }
-                    System.out.println();
-                    //allNewsList.clear();
-                    while (rs.next()) {
-                    /*for (int i = 1; i <= 2; i++)
-                        System.out.print(rs.getInt(i) + "\t");
-                    for (int i = 3; i <= 4; i++)
-                        System.out.print(rs.getString(i) + "\t");
-                    for (int i = 5; i <= 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");
-                    /*for (int i = 5; i < 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");*/
-                        News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
-                        allNewsList.add(news);
-                    }
-                    System.out.println("NewsManager: createList: allNewsList.size()=" + allNewsList.size());
-                    int size = Math.min(allNewsList.size(), resultPerPage);
-                    System.out.println("NewsManager: createList: size=" + size);
-                    if(size>0) {
-                        newsList = allNewsList.subList(0, size);
-                        calculatePages();
-                        generateTableCaption();
-                    }
-                    else
-                        tableListCaption = "brak rekordów!";
-                } else {
-                    throw new IllegalArgumentException(" volume='" + volume + "'");
+                } catch (Exception e) {
+                    tableListCaption = "Brak danych dla księgi: " + volume;
+                    log.severe(user,"NewsManager: createList: rs error: " + e.getMessage());
+                    //log.warning(user,"NewsManager: createList: rs error: " + e);
                 }
-            } catch (Exception e) {
-                tableListCaption = "Brak danych dla księgi: " + volume;
-                logger.warning(" NewsManager: createList: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: createList: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: createList: rs error: " + e);
-                System.out.println(" NewsManager: createList: error: " + e);
+                log.info("NewsManager: createList: after newsList.size()=" + newsList.size());
             }
-            System.out.println("NewsManager: createList: after newsList.size()=" + newsList.size());
         }
     }
 
@@ -181,7 +197,34 @@ public class NewsManager implements Serializable {
 
     public void setVolume(String volume) {
         this.volume = volume;
-        createList();
+    }
+
+    public String getVolumeLong() {
+        Connection con = DataConnect.getConnection();
+            if(con==null)
+                log.warning("NewsManager: getVolumeLong: con is null!");
+            else {
+                log.fine("NewsManager: getVolumeLong: con is NOT null");
+                try {
+                    Statement stmt = con.createStatement();
+                    String query = "SELECT long_name FROM bible WHERE short_name='" + volume + "'";
+                    //System.out.println("NewsManager: getVolumeLong: query = >" + query + "<");
+                    log.fine("NewsManager: getVolumeLong: query = >" + query + "<");
+                    ResultSet rs = stmt.executeQuery(query);
+                    log.fine("NewsManager: getVolumeLong: There are " + rs.getMetaData().getColumnCount() + " columns in the table: " + rs.getMetaData().getTableName(1));
+
+                    if(rs.next()) volumeLong = rs.getString(1);
+                    log.fine("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
+                    //log.info("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
+
+                } catch (Exception e) {
+                    log.warning(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
+                    log.warning(" NewsManager: getVolumeLong: rs error: " + e);
+                } finally {
+                    DataConnect.close(con);
+                }
+        }
+        return volumeLong;
     }
 
     public String getUser() {
@@ -190,58 +233,53 @@ public class NewsManager implements Serializable {
 
     public void setUser(String user) {
         this.user = user;
+        createTableIfNeeded();
+        createList();
     }
 
-    public String getVolumeLong() {
-        Connection con = DataConnect.getConnection();
-        if(con==null)
-            logger.warning("NewsManager: getVolumeLong: con is null!");
+    private void createTableIfNeeded() {
+        if(user==null || volume==null) log.severe("NewsManager: createTableIfNeeded: user=" + user + ". volume=" + volume);
         else {
-            logger.info("NewsManager: getVolumeLong: con is NOT null");
-            try {
-                Statement stmt = con.createStatement();
-                String query = "Select long_name From bible WHERE short_name='" + volume + "'";
-                System.out.println("NewsManager: getVolumeLong: query = >" + query + "<");
-                logger.info("NewsManager: getVolumeLong: query = >" + query + "<");
-                ResultSet rs = stmt.executeQuery(query);
-                System.out.println("NewsManager: getVolumeLong: There are " + rs.getMetaData().getColumnCount() + " columns in the table: " + rs.getMetaData().getTableName(1));
-
-                /*int columnCount = rs.getMetaData().getColumnCount();
-                System.out.println("NewsManager: setVolume: columnCount=" + columnCount);
-                for (int i = 1; i <= columnCount; i++) {
-                    System.out.print(rs.getMetaData().getColumnName(i) + " ");
+            log.info("NewsManager: createTable started. user=" + user + ". volume=" + volume);
+            if (volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}") && LoginDAO.userMatches(user)) {
+                Connection con = null;
+                PreparedStatement ps = null;
+                String tableName = null;
+                try {
+                    con = DataConnect.getConnection();
+                    tableName = "zzzzur__" + user;
+                    ps = con.prepareStatement("SELECT id FROM " + tableName + "  limit 1");
+                    //ResultSet rs = ps.executeQuery();
+                    ps.executeQuery();
+                } catch (SQLException ex) {
+                    log.info("NewsManager: createTable: SQLException ex.getMessage() -->" + ex.getMessage());
+                    String query = "CREATE TABLE " + tableName + " (\n" +
+                            "\tid int AUTO_INCREMENT,\n" +
+                            "\tchapter int NOT NULL,\n" +
+                            "\tvolume_chapter_id int NOT NULL,\n" +
+                            "\tshort_name varchar(10) NOT NULL,\n" +
+                            "\twas_read char(1) default 'N',\n" +
+                            "\tt_plan timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
+                            "\tt_read timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
+                            "\tprimary key (id)\n" +
+                            ");";
+                    log.info("NewsManager: createTable: query = " + query);
+                    try {
+                        ps.execute(query);
+                    } catch (SQLException exc) {
+                        log.severe("NewsManager: createTable: Exception exc.getMessage() -->" + exc.getMessage());
+                    }
+                } catch (Exception e) {
+                    log.severe("NewsManager: createTable: Exception e.getMessage() -->" + e.getMessage());
+                } finally {
+                    DataConnect.close(con);
                 }
-                System.out.println();
-                allNewsList.clear();*/
-                /*while (rs.next()) {
-                    for (int i = 1; i <= 2; i++)
-                        System.out.print(rs.getInt(i) + "\t");
-                    for (int i = 3; i <= 4; i++)
-                        System.out.print(rs.getString(i) + "\t");
-                    for (int i = 5; i <= 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");
-                    /*for (int i = 5; i < 6; i++)
-                        System.out.print(rs.getTimestamp(i) + "\t");
-                    News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3));
-                    allNewsList.add(news);
-                }
-                volumeLong = rs.getString(3);*/
-                if(rs.next()) volumeLong = rs.getString(1);
-                System.out.println("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
-                logger.info("NewsManager: getVolumeLong: volumeLong = '" + volumeLong + "'");
-
-            } catch (Exception e) {
-                logger.warning(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
-                System.out.println(" NewsManager: getVolumeLong: rs error: " + e.getMessage());
-                logger.warning(" NewsManager: getVolumeLong: rs error: " + e);
-                System.out.println(" NewsManager: getVolumeLong: error: " + e);
-            } finally {
-                DataConnect.close(con);
+            } else {
+                log.severe("NewsManager: createTable: Wrong user='" + user + "' or volume ='" + volume + "'");
             }
-
         }
-        return volumeLong;
     }
+
 
     public String getWasRead() {
         return wasRead;
@@ -251,7 +289,7 @@ public class NewsManager implements Serializable {
     public void setWasRead(String inputStr) {
         String[] inputArr = inputStr.split(";");
         int length = inputArr.length;
-        System.out.println("NewsManager: setWasRead: inputStr=" + inputStr + ". length=" + length);
+        log.info("NewsManager: setWasRead: inputStr=" + inputStr + ". length=" + length);
         //#{news.id};volume;title;true
         try{
             if(length!=5) throw new IllegalArgumentException("NewsManager: setWasRead: wrong inputStr=" + inputStr + ". length=" + length);
@@ -282,7 +320,7 @@ public class NewsManager implements Serializable {
                             "\tt_read timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n" +
                             "\tprimary key (id)\n" +
                             ");";
-                    logger.info("NewsManager: setWasRead: query = " + query);
+                    log.info("NewsManager: setWasRead: query = " + query);
                     ps.executeQuery(query);
 
 
@@ -296,14 +334,15 @@ public class NewsManager implements Serializable {
                 }
 
             } catch (SQLException ex) {
-                System.out.println("NewsManager: Login error -->" + 	ex.getMessage());
+                log.severe("NewsManager: Login error -->" + 	ex.getMessage());
             } finally {
                 DataConnect.close(connection);
             }
 
         } catch(Exception e) {
-            logger.warning(e.getMessage());
-            System.out.println(e);
+            log.severe(e.getMessage());
+            //log.severe(e.printStackTrace());
+            //System.out.println(e);
         }
     }
 
@@ -370,11 +409,11 @@ public class NewsManager implements Serializable {
 
     public List<News> getNewsList() {
         if (newsList != null) {
-            logger.info("NewsManager: getNewsList(): News list size: " + newsList.size());
+            log.fine(user,"NewsManager: getNewsList(): News list size: " + newsList.size() + ". volume=" + volume);
             //System.out.println("NewsManager: getNewsList(): News list size: " + newsList.size());
         }
         else {
-            logger.warning("NewsManager: getNewsList(): News list is NULL!");
+            log.warning(user,"NewsManager: getNewsList(): News list is NULL! volume=" + volume);
             //System.out.println("NewsManager: getNewsList(): News list is NULL!");
         }
         return newsList;
@@ -386,10 +425,10 @@ public class NewsManager implements Serializable {
 
     public Map<String, String> getBibleMap() {
         if (bibleMap != null) {
-            //logger.info("NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
+            log.fine(user,"NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
             //System.out.println("NewsManager: getBibleMap(): bibleMap.size()=" + bibleMap.size());
         } else {
-            logger.warning("NewsManager: getBibleMap(): bibleMap is NULL!");
+            log.warning(user,"NewsManager: getBibleMap(): bibleMap is NULL!");
             //System.out.println("NewsManager: getBibleMap(): bibleMap is NULL!");
         }
         return bibleMap;

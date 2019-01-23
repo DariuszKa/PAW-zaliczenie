@@ -9,7 +9,7 @@
 <f:metadata>
     <f:viewParam name="id" value="#{newsManagedBean.id}"/>
     <f:viewParam name="volume" value="#{newsManagedBean.volume}"/>
-    <!-- <f:viewParam name="id" value="411"/> -->
+    <f:viewParam name="volume" value="#{newsManagedBean.content}"/>
 </f:metadata>
 
 <h:body>
@@ -48,7 +48,7 @@
                                     <th width="15%"><label>Rozdział:</label></th>
                                     <td><h:inputText value="#{newsManagedBean.title}"
                                                      id="chapter" required="true"
-                                                     requiredMessage="Pole tytuł jest wymagane" size="90"/></td>
+                                                     requiredMessage="Pole tytuł jest wymagane" readonly="true" size="90" /></td>
                                 </tr>
                                 <tr>
                                     <th width="15%"><label>Treść</label></th>
