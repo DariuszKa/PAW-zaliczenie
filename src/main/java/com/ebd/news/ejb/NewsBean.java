@@ -24,11 +24,6 @@ public class NewsBean {
     private static Log log = new Log();
     public static final int DEFAULT_COUNT = 20;
 
-<<<<<<< HEAD
-=======
-    //private Logger logger = Logger.getLogger("PGE-WEB");
-
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
     private String volume;
 
     //@PersistenceUnit(unitName = "PawSignup")
@@ -78,11 +73,7 @@ public class NewsBean {
         log.info("NewsBean: merge" + o);
         EntityManager entityManager = emf.createEntityManager();
         try {
-<<<<<<< HEAD
             log.fine("Updating object: " + o);
-=======
-            log.info("Updating object: " + o);
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
             entityManager.merge(o);
             log.info("Object updated: ");
             return true;
@@ -135,11 +126,7 @@ public class NewsBean {
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("Select * FROM " + volume.replace(" ", "") + " WHERE id=" + id);
                     log.info("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
-<<<<<<< HEAD
                     news = new News(volume, rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
-=======
-                    news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
 
                 } else {
                     throw new IllegalArgumentException(" volume='" + volume + "'");
@@ -147,11 +134,6 @@ public class NewsBean {
             }
             con.close();
         } catch (Exception e) {
-<<<<<<< HEAD
-=======
-            //System.out.println(" NewsBean: rs error: " + e.getMessage());
-            //System.out.println(" NewsBean: rs error: " + e);
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
             log.severe(" NewsBean: rs error: " + e.getMessage());
             log.severe(" NewsBean: rs error: " + e);
             //return null;

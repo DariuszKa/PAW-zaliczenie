@@ -80,11 +80,7 @@ public class NewsManagedBean implements Serializable {
             log.fine("NewsManagedBean: setId(int id): 7");
             if (this.news != null) {
                 log.fine("NewsManagedBean: setId(int id): 8");
-<<<<<<< HEAD
                 this.title = this.news.getChapter();
-=======
-                this.title = this.news.getTitle();
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
                 this.content = this.news.getContent();
                 log.fine("NewsManagedBean: setId(int id): 10");
             }
@@ -104,13 +100,8 @@ public class NewsManagedBean implements Serializable {
             log.fine("NewsManagedBean: getNews: connection is NOT null.");
             try {
                 Statement stmt = con.createStatement();
-<<<<<<< HEAD
                 if(volume.matches("[0-9]?[A-Z][a-z]{0,2}")) {
                     String query = "SELECT * FROM _" + volume + " WHERE id=" + id;
-=======
-                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
-                    String query = "SELECT * FROM " + volume + " WHERE id=" + id;
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
                     log.fine("NewsManagedBean: getNews: query = >" + query + "<");
                     ResultSet rs = stmt.executeQuery(query);
                     log.fine("NewsManagedBean: getNews: Columns in the table: " + rs.getMetaData().getTableName(1));
@@ -146,13 +137,8 @@ public class NewsManagedBean implements Serializable {
                 //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
                 log.warning("NewsManagedBean: getNews: " + e);
                 //System.out.println("NewsManagedBean: getNews: " + e);
-<<<<<<< HEAD
             //} finally {
             //    DataConnect.close(con);
-=======
-            } finally {
-                DataConnect.close(con);
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
             }
         }
         return null;
@@ -200,14 +186,9 @@ public class NewsManagedBean implements Serializable {
             try {
                 Statement stmt = con.createStatement();
                 if (! volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) throw new IllegalArgumentException("volume='" + volume + "'");
-<<<<<<< HEAD
                     String update = "UPDATE _" + volume + " SET content = '" + content + "' WHERE id=" + id;
                     //log.info("NewsManagedBean: update: update = >" + update + "<");
                     System.out.println("NewsManagedBean: update: update = >" + update + "<");
-=======
-                    String update = "UPDATE " + volume + " SET content = '" + content + "' WHERE id=" + id;
-                    log.info("NewsManagedBean: update: update = >" + update + "<");
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
                     int result = stmt.executeUpdate(update);
                     log.info("NewsManagedBean: getNews: result=" + result);
             } catch (Exception e) {
@@ -215,13 +196,8 @@ public class NewsManagedBean implements Serializable {
                 //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
                 log.warning("NewsManagedBean: getNews: " + e);
                 //System.out.println("NewsManagedBean: getNews: " + e);
-<<<<<<< HEAD
             //} finally {
             //    DataConnect.close(con);
-=======
-            } finally {
-                DataConnect.close(con);
->>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
             }
         }
         return null;
