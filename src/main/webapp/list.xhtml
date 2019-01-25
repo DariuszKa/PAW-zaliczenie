@@ -34,6 +34,8 @@
                     xmlns="http://www.w3.org/1999/xhtml"
                     xmlns:h="http://java.sun.com/jsf/html"
                     xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core"
+                    xmlns:s="http://java.sun.com/jsp/jstl/core"
                     xmlns:ui="http://java.sun.com/jsf/facelets">
         <ui:define name="content">
 
@@ -51,9 +53,14 @@
                                 <f:facet name="header">R.</f:facet>
                                 #{news.titleAbbr}
                             </h:column>
+
                             <h:column>
                                 <f:facet name="header">Treść</f:facet>
                                 #{news.contentAbbr}
+                                <!-- <s:if test='#{news.wasRead.equals("TAK")}'>#{news.contentAbbr}</s:if>
+                                <b><s:if test='#{!news.wasRead.equals("TAK")}'>#{news.contentAbbr}</s:if></b> -->
+
+
                                 <f:facet name="footer">
 
                                     <div class="container">
@@ -85,8 +92,11 @@
                             </h:column>
 
                             <h:column>
-                                <f:facet name="header">&nbsp;S.&nbsp;</f:facet>
-                                &nbsp;#{news.wasRead}
+                                <f:facet name="header">Przecz.</f:facet>
+                                <!-- <c:set var="str" value="#{news.wasRead}"/>
+                                <s:if test='#{news.wasRead.equalsIgnoreCase("TAK")}'>#{news.wasRead}</s:if>
+                                <s:if test='#{news.wasRead.equalsIgnoreCase("NIE")}'><b>#{news.wasRead}</b></s:if> -->
+                                #{news.wasRead}
                             </h:column>
 
                             <h:column>
@@ -112,14 +122,12 @@
                                     &nbsp;
                                 </s:if>
 
-                                <!-- <h:link outcome="list.xhtml?removeId=#{news.id}" value="" title="Oznacz jako przeczytane"> -->
-                                <h:link outcome="list.xhtml?wasRead=#{news.id};title;false" value="" title="Oznacz jako przeczytane">
+                                <h:link outcome="list.xhtml?wasRead=#{news.volume};#{news.chapter};true" value="" title="Oznacz jako przeczytane">
                                     <h:graphicImage library="img" name="readYes.png"/>
                                 </h:link>
                                 &nbsp;
 
-                                <!-- <h:link outcome="list.xhtml?removeId=#{news.id}" value="" title="Oznacz jako nieprzeczytane"> -->
-                                <h:link outcome="list.xhtml?wasRead=#{news.id};volume;title;true;#{loginBean.user}" value="" title="Oznacz jako nieprzeczytane">
+                                <h:link outcome="list.xhtml?wasRead=#{news.volume};#{news.chapter};false" value="" title="Oznacz jako nieprzeczytane">
                                     <h:graphicImage library="img" name="readNot.png"/>
                                 </h:link>
 

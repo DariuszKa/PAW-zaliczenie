@@ -80,7 +80,7 @@ public class NewsManagedBean implements Serializable {
             log.fine("NewsManagedBean: setId(int id): 7");
             if (this.news != null) {
                 log.fine("NewsManagedBean: setId(int id): 8");
-                this.title = this.news.getTitle();
+                this.title = this.news.getChapter();
                 this.content = this.news.getContent();
                 log.fine("NewsManagedBean: setId(int id): 10");
             }
@@ -100,7 +100,7 @@ public class NewsManagedBean implements Serializable {
             log.fine("NewsManagedBean: getNews: connection is NOT null.");
             try {
                 Statement stmt = con.createStatement();
-                if(volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}")) {
+                if(volume.matches("[0-9]?[A-Z][a-z]{0,2}")) {
                     String query = "SELECT * FROM _" + volume + " WHERE id=" + id;
                     log.fine("NewsManagedBean: getNews: query = >" + query + "<");
                     ResultSet rs = stmt.executeQuery(query);
@@ -126,7 +126,7 @@ public class NewsManagedBean implements Serializable {
                             else string = rs.getString(i);
                             System.out.print(string + "\t");
                             System.out.println();*/
-                        News news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                        News news = new News(volume, rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
                         return news;
                     }
                 }else {
@@ -137,8 +137,8 @@ public class NewsManagedBean implements Serializable {
                 //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
                 log.warning("NewsManagedBean: getNews: " + e);
                 //System.out.println("NewsManagedBean: getNews: " + e);
-            } finally {
-                DataConnect.close(con);
+            //} finally {
+            //    DataConnect.close(con);
             }
         }
         return null;
@@ -196,8 +196,8 @@ public class NewsManagedBean implements Serializable {
                 //System.out.println("NewsManagedBean: getNews: " + e.getMessage());
                 log.warning("NewsManagedBean: getNews: " + e);
                 //System.out.println("NewsManagedBean: getNews: " + e);
-            } finally {
-                DataConnect.close(con);
+            //} finally {
+            //    DataConnect.close(con);
             }
         }
         return null;

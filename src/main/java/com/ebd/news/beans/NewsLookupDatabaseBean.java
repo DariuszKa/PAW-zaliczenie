@@ -53,7 +53,7 @@ public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
         if (n == null)
             log.info("NewsLookupDatabaseBean returning null for id=" + id);
         else
-            log.info("News " + id + "title: " + n.getTitle());
+            log.info("News " + id + "title: " + n.getChapter());
         //log.info("NewsLookupDatabaseBean: getNews finished. id=" + id);
         return n;
     }

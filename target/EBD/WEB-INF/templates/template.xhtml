@@ -54,7 +54,7 @@
                     <div class="menu_list" id="menu1_list" >
                         <div class="head submenu">Stary Testament:</div>
                         <c:forEach items="#{newsManager.bibleMap}" var="entry">
-                            <s:if test="#{entry.key=='Mt'}"><div class="head submenu">Nowy Testament:</div></s:if>
+                            <s:if test='#{entry.key.equals("Mt")}'><div class="head submenu">Nowy Testament:</div></s:if>
                                 <!-- <c:set var="str" value="list.xhtml?volume=#{entry.key}"/> -->
                                 <!-- <c:set var="str" value="list.xhtml?user=#{newsManager.user}"/> -->
                             <!-- <c:set var="str" value="list.xhtml?user=#{newsManager.user}&amp;volume=#{entry.key}"/> -->

@@ -20,11 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 @Table(name = "news")
 @XmlRootElement
 @XmlType( namespace = "http://paw.agh.edu.pl/types/", name = "News",
-        propOrder = { "id", "title", "content", "createdAtTimestamp" })
+        propOrder = { "id", "chapter", "content", "createdAtTimestamp" })
 public class News {
-
+    protected String volume;
     protected int id;
-    protected int title;
+    protected int chapter;
     protected String content;
     protected String wasRead;
     protected Date createdAt;
@@ -33,10 +33,11 @@ public class News {
     public News() {
     }
 
-    public News(int id, int title, String content, String wasRead) {
+    public News(String volume, int id, int title, String content, String wasRead) {
         //super();
+        this.volume = volume;
         this.id = id;
-        this.title = title;
+        this.chapter = title;
         this.content = content;
         createdAt = new Date();
         updatedAt = new Date();
@@ -54,13 +55,21 @@ public class News {
         this.id = id;
     }
 
-    @Column(name = "title", nullable = false)
-    public int getTitle() {
-        return title;
+    public String getVolume() {
+        return volume;
     }
 
-    public void setTitle(int title) {
-        this.title = title;
+    public void setVolume(String volume) {
+        this.volume = volume;
+    }
+
+    @Column(name = "title", nullable = false)
+    public int getChapter() {
+        return chapter;
+    }
+
+    public void setChapter(int chapter) {
+        this.chapter = chapter;
     }
 
     @Column(name = "content", nullable = false)
@@ -128,7 +137,7 @@ public class News {
     @XmlTransient
     @Transient
     public String getTitleAbbr() {
-        return String.valueOf(title);
+        return String.valueOf(chapter);
     }
 
     @XmlTransient
@@ -159,7 +168,7 @@ public class News {
 
     @Override
     public String toString() {
-        return "News [id=" + id + ", title=" + title + ", content=" + content + ", createdAt="
+        return "News [id=" + id + ", title=" + chapter + ", content=" + content + ", createdAt="
                 + createdAt + ", updatedAt=" + updatedAt + "]";
     }
 

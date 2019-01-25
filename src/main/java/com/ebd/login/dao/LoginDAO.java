@@ -41,8 +41,8 @@ public class LoginDAO {
 			return false;
 		} catch (Exception e) {
 			log.severe(user,"LoginDAO: Login Exception -->" + e.getMessage());
-		} finally {
-			DataConnect.close(con);
+		//} finally {
+		//	DataConnect.close(con);
 		}
 		return false;
 	}

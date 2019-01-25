@@ -126,7 +126,7 @@ public class NewsBean {
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("Select * FROM " + volume.replace(" ", "") + " WHERE id=" + id);
                     log.info("NewsBean: Columns in the table: " + rs.getMetaData().getTableName(1));
-                    news = new News(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
+                    news = new News(volume, rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4));
 
                 } else {
                     throw new IllegalArgumentException(" volume='" + volume + "'");
@@ -137,8 +137,8 @@ public class NewsBean {
             log.severe(" NewsBean: rs error: " + e.getMessage());
             log.severe(" NewsBean: rs error: " + e);
             //return null;
-        } finally {
-            DataConnect.close(con);
+        //} finally {
+        //    DataConnect.close(con);
         }
         return news;
     }

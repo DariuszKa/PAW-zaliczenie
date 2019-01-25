@@ -376,3 +376,7 @@ input {
 	color:#fff;
 }
 /* end _image_preview.js*/
+
+#sf_admin_list .green {
+	color: #040;
+}

@@ -14,40 +14,54 @@ import java.sql.*;
 
 public class DataConnect {
 	private static Log log = new Log();
+	private static Connection connection=null;
 
 	public static Connection getConnection() {
-		String dbDriver = "oracle.jdbc.OracleDriver";
-		String dbName = "darekdb";
-		String dbUser = "darek";
-		String dbPW = readFile("C:\\Tomcat\\HT");
-		String dbHost = "//localhost";
-		String dbPort = "3306";
-		String dbUrl = "jdbc:mysql:" + dbHost + ":" + dbPort + "/" + dbName + "?user=" + dbUser + "&password=" + dbPW + "&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
-		try {
-			Class.forName(dbDriver);
-			Connection connection = DriverManager.getConnection(dbUrl, dbUser, dbPW);
-			DatabaseMetaData dbmd = connection.getMetaData();
-			log.fine("DataConnect: DatabaseProductVersion: " + dbmd.getDatabaseProductVersion() );
-			return connection;
-		} catch (SQLException e1) {
-			log.severe("JDBC driver SQLException e1 --> " + e1.getMessage());
-		} catch (ClassNotFoundException e2) {
-			log.severe("JDBC driver ClassNotFoundException e2 --> " + e2.getMessage());
-		} catch (StringIndexOutOfBoundsException e3) {
-			log.severe("JDBC driver StringIndexOutOfBoundsException e3 --> " + e3.getMessage());
-		} catch (Exception e4) {
-			log.severe("JDBC driver Exception e4 --> " + e4.getMessage());
-		}
-		return null;
+		if(connection==null) {
+			String dbDriver = "oracle.jdbc.OracleDriver";
+			String dbName = "darekdb";
+			String dbUser = "darek";
+			String dbPW = readFile("C:\\Tomcat\\HT");
+			String dbHost = "//localhost";
+			String dbPort = "3306";
+			String dbUrl = "jdbc:mysql:" + dbHost + ":" + dbPort + "/" + dbName + "?user=" + dbUser + "&password=" + dbPW + "&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
+			try {
+				Class.forName(dbDriver);
+				connection = DriverManager.getConnection(dbUrl, dbUser, dbPW);
+				DatabaseMetaData dbmd = connection.getMetaData();
+				log.fine("DataConnect: DatabaseProductVersion: " + dbmd.getDatabaseProductVersion());
+				return connection;
+			} catch (SQLException e1) {
+				log.severe("JDBC driver SQLException e1 --> " + e1.getMessage());
+			} catch (ClassNotFoundException e2) {
+				log.severe("JDBC driver ClassNotFoundException e2 --> " + e2.getMessage());
+			} catch (StringIndexOutOfBoundsException e3) {
+				log.severe("JDBC driver StringIndexOutOfBoundsException e3 --> " + e3.getMessage());
+			} catch (Exception e4) {
+				log.severe("JDBC driver Exception e4 --> " + e4.getMessage());
+			}
+			return null;
+		} else return connection;
 	}
 
-	public static void close(Connection con) {
+	public static void close() {
+		try {
+			connection.close();
+			connection = null;
+		} catch (SQLException e) {
+			log.severe(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	/*public static void close(Connection con) {
 		try {
 			con.close();
+			con = null;
 		} catch (Exception e) {
 			log.severe(e.getMessage());
 		}
-	}
+	}*/
 
 	private static String readFile(String path) {
 		BufferedReader reader = null;
