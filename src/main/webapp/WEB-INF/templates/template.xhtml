@@ -42,8 +42,12 @@
             <div id="main">
                 <c:choose>
                     <c:when test="#{newsManager.volume != null}">
+<<<<<<< HEAD
                         Wybrano księgę: <h:outputText value="#{newsManager.volume}"/>
                         <!-- Uzytkownik: <B><h:outputText value="#{newsManager.user}"/></B> -->
+=======
+                        Wybrano księgę: <B><h:outputText value="#{newsManager.volume}"/></B>
+>>>>>>> 43b8fa438986623911b051a97c796ec2f2be194f
                     </c:when>
                     <c:otherwise>
                         Jeszcze nie wybrano księgi.
