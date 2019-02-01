@@ -8,13 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="40d48620-83dc-429d-aaef-b80f12ef71e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/read.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/read.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/signup/beans/SignupBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/WEB-INF/classes/com/ebd/signup/beans/SignupBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EBD/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/EBD/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ebd/signup/beans/SignupBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ebd/signup/beans/SignupBean.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="login.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+            <state relative-caret-position="289">
+              <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -41,8 +39,8 @@
       <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="-85">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -50,7 +48,7 @@
       <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
+            <state relative-caret-position="652">
               <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,16 +60,24 @@
       <file leaf-file-name="SignupBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/beans/SignupBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="134" column="24" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
+            <state relative-caret-position="-1258">
+              <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+              <folding>
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#2273#2274#0" expanded="true" />
+                <element signature="e#2304#2305#0" expanded="true" />
+                <element signature="e#2487#2488#0" expanded="true" />
+                <element signature="e#2515#2516#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="306">
               <caret line="98" column="58" lean-forward="true" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
             </state>
           </provider>
@@ -91,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignupDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="77" column="90" lean-forward="true" selection-start-line="77" selection-start-column="90" selection-end-line="77" selection-end-column="90" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
@@ -108,8 +114,8 @@
       <file leaf-file-name="list.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1019">
-              <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+            <state relative-caret-position="71">
+              <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -117,8 +123,8 @@
       <file leaf-file-name="read.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="80" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="87" />
+            <state relative-caret-position="122">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -126,8 +132,8 @@
       <file leaf-file-name="edit.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+            <state relative-caret-position="122">
+              <caret line="33" column="51" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -143,9 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>var</find>
-      <find>click</find>
-      <find>onclick</find>
       <find>Zaloguj</find>
       <find>reg</find>
       <find>toggle</find>
@@ -166,13 +169,16 @@
       <find>black</find>
       <find>LoginDAO: matches: ERROR</find>
       <find>loginMatches</find>
-      <find>Lista rozdzia</find>
       <find>Zaplanowane</find>
       <find>SignupDAO: registerUser: login</find>
       <find>User{id=</find>
       <find>register: user = User</find>
       <find>toString</find>
       <find>Registration was NOT valid for</find>
+      <find>Lista rozdzia</find>
+      <find>messages</find>
+      <find>Wybierz inny login</find>
+      <find>Złe</find>
     </findStrings>
     <replaceStrings>
       <replace>listManager</replace>
@@ -215,17 +221,17 @@
         <option value="$PROJECT_DIR$/src/main/webapp/login.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/signup.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/Log.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/signup/beans/SignupBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/signup-success.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/login/dao/LoginDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/read.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/edit.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/list.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/signup/beans/SignupBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java" />
       </list>
     </option>
   </component>
@@ -757,12 +763,12 @@
       <workItem from="1548785500564" duration="10313000" />
       <workItem from="1548800232979" duration="3333000" />
       <workItem from="1549011555890" duration="16099000" />
-      <workItem from="1549041221998" duration="6964000" />
+      <workItem from="1549041221998" duration="9789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458519000" />
+    <option name="totallyTimeSpent" value="461344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="5" width="1480" height="787" extended-state="0" />
@@ -789,9 +795,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32868218" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42834395" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42675158" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.54591835" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13943662" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15" />
       <window_info anchor="right" id="Bean Validation" order="12" weight="0.32895887" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -1076,13 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/signup-success.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1105,60 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="80" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1019">
-          <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1174,17 +1123,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/beans/SignupBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="134" column="24" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
+        <state relative-caret-position="306">
+          <caret line="98" column="58" lean-forward="true" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/jpa/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/login/beans/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="98" column="58" lean-forward="true" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
+        <state relative-caret-position="652">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/beans/SignupBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1258">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#2273#2274#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/read.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ebd/signup/dao/SignupDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="77" column="90" lean-forward="true" selection-start-line="77" selection-start-column="90" selection-end-line="77" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

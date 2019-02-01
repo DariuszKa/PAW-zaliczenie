@@ -151,8 +151,7 @@ public class SignupBean implements Serializable {
             log.warning(u.getLogin(),"SignupBean: register: Registration was NOT valid for '" + u.getLogin() + "'");
             log.warning(u.getLogin(),"SignupBean: register: user = " + u);
             FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN, "Złe parametry rejestracji",
-                            "Podaj prawidłowe login, imię, hasło, email"));
+                    new FacesMessage(FacesMessage.SEVERITY_WARN, "Zarejestrowanie użytkownika jest niemożliwe", ""));
             //return "signup-fail";
             //return "signup";
             //return "signup";

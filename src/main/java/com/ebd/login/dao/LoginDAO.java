@@ -15,6 +15,7 @@ public class LoginDAO {
 	private static Log log = new Log();
 
 	public static boolean validate(String user, String password) {
+		user = user.toLowerCase();
 		log.info(user, "LoginDAO: validate: started. user='" + user + "'");
 		Connection con;
 		PreparedStatement ps;

@@ -27,7 +27,7 @@ public class SignupDAO {
     }
 
     public static boolean registerUser(User u) {
-        String user = u.getLogin();
+        String user = u.getLogin().toLowerCase();
         String password = u.getPassword();
         String nickName = u.getNickName();
         String email = u.getEmail();
@@ -37,7 +37,7 @@ public class SignupDAO {
         try {
             Long waitTime = getRandom(400L, 4000L);
             //if (loginPasswordMatches(user, password) && !user.toLowerCase().contains((CharSequence) Arrays.asList(userBlackList))) {
-            if (loginMatches(user) && passwordMatches(password) && !(userBlackList.stream().anyMatch(s -> user.toLowerCase().contains(s.toLowerCase()))) && loginMatches(nickName) && emailMatches(email)) {
+            if (loginMatches(user) && passwordMatches(password) && !(userBlackList.stream().anyMatch(s -> user.contains(s.toLowerCase()))) && loginMatches(nickName) && emailMatches(email)) {
                 log.info(user, "SignupDAO: registerUser: validation OK. user='" + user + "'. watitTime=" + waitTime);
                 Thread.sleep(waitTime);
                 con = DataConnect.getConnection();
@@ -48,9 +48,7 @@ public class SignupDAO {
                 rs = ps.executeQuery();
                 if (rs.next()) {
                     log.warning(user, "SignupDAO: registerUser: login juz istnieje!!!");
-                    FacesContext.getCurrentInstance().addMessage(null,
-                            new FacesMessage(FacesMessage.SEVERITY_WARN, "Wybierz inny login", ""));
-                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Wybierz inny login", ""));
+                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Wybierz inny login!", ""));
                     return false;
                 }
 
@@ -58,9 +56,8 @@ public class SignupDAO {
                 ps.setString(1, nickName);
                 rs = ps.executeQuery();
                 if (rs.next()) {
-                    log.warning(user, "SignupDAO: registerUser: login już istnieje");
-                    FacesContext.getCurrentInstance().addMessage(null,
-                            new FacesMessage(FacesMessage.SEVERITY_WARN, "Wybierz inny nick", ""));
+                    log.warning(user, "SignupDAO: registerUser: nick już istnieje");
+                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Wybierz inny nick!", ""));
                     return false;
                 }
 
@@ -81,6 +78,7 @@ public class SignupDAO {
                     return true;
                 } else {
                     log.warning(user, "SignupDAO: registerUser: rs WRONG, Registration was NOT ok");
+                    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Zmień parametry rejestracji", ""));
                     return false;
                 }
                 /*if (rs.next()) {
@@ -106,9 +104,10 @@ public class SignupDAO {
     public static boolean loginMatches(String str) {
         log.fine(str, "SignupDAO: loginMatches: started. str='" + str + "'");
         boolean check;
-        if (sqlBlackList.stream().anyMatch(s -> str.contains(s))) check = false;
+        //str = str.toLowerCase();
+        if (sqlBlackList.stream().anyMatch(s -> str.toLowerCase().contains(s))) check = false;
             //else if( userBlackList.stream().anyMatch(s -> str.contains(s)) ) check = false;
-        else check = str.matches("[a-z][0-9a-z]{3,15}");
+        else check = str.toLowerCase().matches("[a-z][0-9a-z]{3,15}");
         log.info(str, "SignupDAO: loginMatches: finished. str='" + str + "'. check=" + check);
         return check;
     }
@@ -140,7 +139,8 @@ public class SignupDAO {
         if (sqlBlackList.stream().anyMatch(s -> str.contains(s))) check = false;
             //else check = (str.matches("[0-9A-Za-z\\.,_\\-!]{8,18}"));
             //else check = (str.matches("^[A-Za-z0-9][A-Za-z0-9\\._\\-]+@[A-Za-z0-9][A-Za-z0-9\\._\\-]+\\.[A-Za-z]{2,6}$"));
-        else check = (str.matches("[A-Za-z][\\w._\\-]+@[\\w._\\-]+\\.[A-Za-z]{2,20}$"));
+            //else check = (str.matches("[A-Za-z][\\w._\\-]+@[\\w._\\-]+\\.[A-Za-z]{2,20}$"));
+        else check = (str.matches("[A-Za-z][\\w._\\-]*@[\\w._\\-]+\\.[A-Za-z]{2,20}$"));
         if (!check) FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(FacesMessage.SEVERITY_WARN, "Popraw adres email", ""));
         return check;

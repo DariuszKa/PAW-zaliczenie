@@ -19,11 +19,10 @@
                          id="login"
                          required="true"
                          requiredMessage=" Pole Twój login jest wymagane!"
-                         validatorMessage=" Niepoprawny format pola. Pierwsza litera, 5-15 liter/cyfr">
+                         validatorMessage=" Login - niepoprawny format pola. Pierwsza litera, 5-15 liter/cyfr">
                 <f:validateLength minimum="5" maximum="15"/>
-                <f:validateRegex pattern="[A-Za-z][0-9A-Za-z]{3,15}"/>
+                <f:validateRegex pattern="[A-Za-z][0-9A-Za-z]{4,16}"/>
             </h:inputText>
-            <h:message for="login"></h:message>
             <br/><br/>
 
             <h:outputText value="Twoje hasło: "/>
@@ -31,11 +30,10 @@
                            id="password"
                            required="true"
                            requiredMessage=" Pole Hasło jest wymagane!"
-                           validatorMessage=" Niepoprawny format pola. Wpisz 8-18 liter/cyfr/.,-!?">
+                           validatorMessage=" Hasło - niepoprawny format pola. Wpisz 8-18 liter/cyfr/.,-!?">
                 <f:validateLength minimum="8" maximum="18"/>
                 <f:validateRegex pattern="[0-9A-Za-z\.,_\-!]{7,19}"/>
             </h:inputSecret>
-            <h:message for="password"></h:message>
             <br/><br/>
 
             <h:outputText value="Twój nick: "/>&nbsp;&nbsp;
@@ -43,11 +41,10 @@
                          id="nickName"
                          required="true"
                          requiredMessage=" Pole Nick jest wymagane!"
-                         validatorMessage=" Niepoprawny format pola. Pierwsza litera, 5-15 liter/cyfr">
+                         validatorMessage=" Nick - niepoprawny format pola. Pierwsza litera, 5-15 liter/cyfr">
                 <f:validateLength minimum="5" maximum="15"/>
-                <f:validateRegex pattern="[A-Za-z][0-9A-Za-z]{3,15}"/>
+                <f:validateRegex pattern="[A-Za-z][0-9A-Za-z]{4,16}"/>
             </h:inputText>
-            <h:message for="nickName"></h:message>
             <br/><br/>
 
             <h:outputText value="Twój e-mail: "/>
@@ -55,11 +52,10 @@
                          id="email"
                          required="true"
                          requiredMessage="Pole e-mail jest wymagane!"
-                         validatorMessage=" Niepoprawny format pola. Wpisz w formacie uzytkownik@domena.roz">
+                         validatorMessage=" e-mail - niepoprawny format pola. Wpisz w formacie uzytkownik@domena.roz">
                 <f:validateLength minimum="6" maximum="36"/>
-                <f:validateRegex pattern="[A-Za-z][\w._\-]+@[\w._\-]+\.[A-Za-z]{2,14}$"/>
+                <f:validateRegex pattern="[A-Za-z][\w._\-]*@[\w._\-]+\.[A-Za-z]{2,20}$"/>
             </h:inputText>
-            <h:message for="email"></h:message>
             <br/><br/>
 
             <p style="font-style: italic;">
@@ -67,6 +63,11 @@
             </p>
 
             <h:commandButton action="#{signupBean.register}" value="Zarejestruj się!"></h:commandButton>
+
+
+            <div class="notice" style="color:red">
+                <h:messages/>
+            </div>
 
         </h:form>
 

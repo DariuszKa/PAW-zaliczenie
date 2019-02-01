@@ -349,6 +349,15 @@ ul.sf_admin_td_actions , ul.sf_admin_actions {	list-style: none; }
     color: #fff;
 }
 
+.input_error {
+    margin: 4px 0;
+    padding: 4px 4px 4px 30px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f53;
+    color: #fff;
+}
+
 #sf_admin_container ul li a { text-decoration: none; }
 
 #sf_admin_container ul li a:hover { color: #333; }
