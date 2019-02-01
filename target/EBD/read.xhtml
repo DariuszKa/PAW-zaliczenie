@@ -40,7 +40,13 @@
                                 <tfoot class="stdfooter">
                                 <tr>
                                     <td colspan="2">
-                                        <h:button outcome="list.xhtml" value="Lista rozdziałów"/>
+                                        <h:button outcome="list.xhtml" value="Lista rozdziałów"/>&nbsp;
+                                        <h:link outcome="list.xhtml?wasRead=#{newsManagedBean.volume};#{newsManagedBean.title};true" value="Oznacz jako przeczytane">
+                                            <h:graphicImage library="img" name="readYes.png"/>
+                                        </h:link>&nbsp;
+                                        <h:link outcome="list.xhtml?wasRead=#{newsManagedBean.volume};#{newsManagedBean.title};false" value="Oznacz jako nieprzeczytane">
+                                            <h:graphicImage library="img" name="readNot.png"/>
+                                        </h:link>
                                     </td>
                                 </tr>
                                 </tfoot>

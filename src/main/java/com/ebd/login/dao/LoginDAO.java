@@ -43,7 +43,7 @@ public class LoginDAO {
 			} else {
 				log.warning(user, "LoginDAO: matches: ERROR. user='" + user + "'. watitTime=" + waitTime);
 				Thread.sleep(waitTime*10);
-				throw new IllegalArgumentException("user='" + user + "'. password='" + password + "'");
+				throw new IllegalArgumentException("user='" + user + "'. password='" + hidePassword(password) + "'");
 			}
 			//log.info(user,"LoginDAO: validate: Login was OK");
 		} catch (SQLException ex) {
@@ -60,4 +60,7 @@ public class LoginDAO {
 		return min +((long)(r.nextDouble()*(max-min)));
 	}
 
+	public static String hidePassword(String password) {
+		return password.replaceAll(".","*");
+	}
 }

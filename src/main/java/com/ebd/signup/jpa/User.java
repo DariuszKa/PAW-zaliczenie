@@ -92,7 +92,7 @@ public class User {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("User{");
-        sb.append("id=").append(id).append('\'');
+        sb.append("id=").append(id);
         sb.append(", login='").append(login).append('\'');
         sb.append(", nickName='").append(nickName).append('\'');
         //sb.append(", lastName='").append(lastName).append('\'');

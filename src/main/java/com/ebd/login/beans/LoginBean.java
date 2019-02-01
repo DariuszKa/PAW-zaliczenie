@@ -55,13 +55,13 @@ public class LoginBean implements Serializable {
         log.info(user,"LoginBean: validate: Authorization started.");
         boolean valid = LoginDAO.validate(user, pwd);
         if(valid) {
-            log.info(getUser(),"Authorization is valid for '" + getUser() + "'");
+            log.info(getUser(),"LoginBean: Authorization is valid for '" + getUser() + "'");
             HttpSession session = SessionUtils.getSession();
             //session = SessionUtils.getSession();
             session.setAttribute("username", user);
             return "list";
         } else {
-            log.warning(getUser(),"Authorization was NOT valid for '" + getUser() + "'");
+            log.warning(getUser(),"LoginBean: Authorization was NOT valid for '" + getUser() + "'");
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN, "Zły login lub hasło",
                             "Podaj prawidłowy login oraz hasło"));
