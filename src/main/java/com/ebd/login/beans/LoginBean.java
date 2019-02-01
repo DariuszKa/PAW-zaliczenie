@@ -1,8 +1,6 @@
 package com.ebd.login.beans;
 
 import java.io.Serializable;
-//import java.util.logging.Logger;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -15,17 +13,15 @@ import com.ebd.login.dao.LoginDAO;
 @ManagedBean
 @SessionScoped
 public class LoginBean implements Serializable {
-    private static final long serialVersionUID = 1094801825228386363L;
+    private static final long serialVersionUID = 1094801825228386168L;
     private static Log log = new Log();
     private String pwd;
     private String msg;
     private String user;
 
-    //private HttpSession session;
-    ///private Logger logger = Logger.getLogger("PGE-WEB");
-
     public String getPwd() {
-        return pwd;
+        //return pwd;
+        return "";
     }
 
     public void setPwd(String pwd) {
@@ -48,32 +44,23 @@ public class LoginBean implements Serializable {
         this.user = user;
     }
 
-    /*private HttpSession getSession() {
-        return session;
-    }
-
-    private void setSession(HttpSession session) {
-        this.session = session;
-    }*/
 
     public boolean getIsAdmin() {
-        //System.out.println("LoginBean: getIsAdmin(): user = '" + user + "'. isAdmin = " + (user.contains("admin")));
         log.fine("LoginBean: getIsAdmin(): user = '" + user + "'. isAdmin = " + (user.contains("admin")));
         if(user.contains("admin")) return true;
         return false;
     }
 
     public String validateUsernamePassword() {
+        log.info(user,"LoginBean: validate: Authorization started.");
         boolean valid = LoginDAO.validate(user, pwd);
         if(valid) {
-            ///logger.info("Authorization is valid for '" + getUser() + "'");
             log.info(getUser(),"Authorization is valid for '" + getUser() + "'");
             HttpSession session = SessionUtils.getSession();
             //session = SessionUtils.getSession();
             session.setAttribute("username", user);
             return "list";
         } else {
-            //logger.warning("Authorization was NOT valid for '" + getUser() + "'");
             log.warning(getUser(),"Authorization was NOT valid for '" + getUser() + "'");
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN, "Zły login lub hasło",
@@ -88,4 +75,5 @@ public class LoginBean implements Serializable {
         session.invalidate();
         return "index";
     }
+
 }

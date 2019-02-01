@@ -16,7 +16,6 @@ import com.ebd.news.jpa.News;
 @ManagedBean(eager = true)
 @ApplicationScoped
 public class NewsLookupDatabaseBean implements NewsLookupService, Serializable {
-
     private static final long serialVersionUID = -5442331602203781978L;
     private static Log log = new Log();
     //protected Logger logger = Logger.getLogger("PawNewsExample");

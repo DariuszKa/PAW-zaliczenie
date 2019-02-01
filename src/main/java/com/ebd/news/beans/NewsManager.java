@@ -4,20 +4,18 @@ import com.ebd.login.beans.Log;
 import com.ebd.login.dao.LoginDAO;
 import com.ebd.login.util.DataConnect;
 import com.ebd.news.jpa.News;
-import com.ebd.login.beans.LoginBean;
-import javax.faces.application.FacesMessage;
+
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
 import java.io.Serializable;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
+
+import static com.ebd.signup.dao.SignupDAO.loginMatches;
 
 
 @ManagedBean
@@ -36,13 +34,12 @@ public class NewsManager implements Serializable {
     private String volume;
     private String volumeLong;
     private String user;
-
     private String wasRead;
 
     //private Logger logger = Logger.getLogger("PGE-WEB");
 
-    @ManagedProperty(value="#{newsLookupDatabaseBean}")
-    private NewsLookupDatabaseBean newsLookupService;
+    //@ManagedProperty(value="#{newsLookupDatabaseBean}")
+    //private NewsLookupDatabaseBean newsLookupService;
 
     //atrybuty potrzebne do wyświetlania listy newsów
     private int page = 1, nextPage = 1, lastPage = 1, firstPage = 1, previousPage = 1;
@@ -126,7 +123,8 @@ public class NewsManager implements Serializable {
                             System.out.print(rs.getTimestamp(i) + "\t");*/
 
                             int chapter = rs.getInt(2);
-                            String queryUser = "SELECT was_read FROM zzzzur__" + user + " WHERE chapter=" + chapter + " AND (was_read like 'y')";
+                            //String queryUser = "SELECT was_read FROM zzzzur__" + user + " WHERE chapter=" + chapter + " AND (was_read like 'y')";
+                            String queryUser = "SELECT was_read FROM zzzzur__" + user + " WHERE volume='" + volume + "' AND chapter=" + chapter + " AND was_read='Y'";
                             log.fine(user,"NewsManager: createList: queryUser = >" + queryUser + "<");
                             Statement stmtUser = connection.createStatement();
                             ResultSet rsUser = stmtUser.executeQuery(queryUser);
@@ -241,8 +239,8 @@ public class NewsManager implements Serializable {
         if(user==null || volume==null) log.severe("NewsManager: createTableIfNeeded: user=" + user + ". volume=" + volume);
         else {
             log.info("NewsManager: createTable started. user=" + user + ". volume=" + volume);
-            if (volume.matches("[0-9]?[A-Z]{1}[a-z]{0,2}") && LoginDAO.userMatches(user)) {
-                Connection con = null;
+            if (volume.matches("[0-9]?[A-Z][a-z]{0,2}") && loginMatches(user)) {
+                Connection con;
                 PreparedStatement ps = null;
                 String tableName = null;
                 try {
@@ -363,7 +361,7 @@ public class NewsManager implements Serializable {
     private void calculatePages() {
         if (allNewsList != null) {
             recordsCount = allNewsList.size();
-            allPages = (int) Math.ceil((double) ( (double)recordsCount / NewsManager.resultPerPage));
+            allPages = (int) Math.ceil((double)recordsCount / NewsManager.resultPerPage);
         }
         firstPage = 1;
         if (recordsCount == 0 || recordsCount <= NewsManager.resultPerPage) {
@@ -384,7 +382,7 @@ public class NewsManager implements Serializable {
                 previousPage = page;
         }
         generateTableCaption();
-        //wsadzamy do newwList te co trzeba
+        //wsadzamy do newsList te co trzeba
         int start = NewsManager.resultPerPage * (page-1);
         int end = start + NewsManager.resultPerPage;
         if (end > recordsCount)

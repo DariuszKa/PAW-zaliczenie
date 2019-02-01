@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Rejestracja</title>
+    <!-- <link rel="stylsheet" href="styles.css"/> -->
+</h:head>
+<h:body>
+    <div align="center">
+        <h2>Rejestracja nowego użytkownika - webapp/signup</h2>
+
+        <!-- <fieldset>
+            <legend>Formularz rejestracyjny</legend>
+        <h2>Formularz rejestracyjny</h2> -->
+        <h:form>
+            <h:messages styleClass="error"/>
+
+            Login: <h:inputText value="#{signupBean.login}"
+                                id="login"
+                                required="true"
+                                requiredMessage="Pole Login jest wymagane!"
+                                validatorMessage="Niepoprawny format pola">
+            <f:validateLength minimum="5"/>
+            <f:validateLength maximum="15"/>
+            <f:validateRegex pattern="[0-9A-Za-z]{5,15}"/>
+        </h:inputText>
+            <h:message for="login"></h:message>
+            <br/><br/>
+
+            Hasło: <h:inputText value="#{signupBean.password}"
+                                id="password"
+                                required="true"
+                                requiredMessage="Pole Hasło jest wymagane!"
+                                validatorMessage="Niepoprawny format pola">
+            <f:validateLength minimum="7"/>
+            <f:validateLength maximum="17"/>
+            <f:validateRegex pattern="[0-9A-Za-z\.,\-_!?]{7,17}"/>
+        </h:inputText>
+            <h:message for="password"></h:message>
+            <br/><br/>
+
+            Imię:&nbsp;&nbsp;<h:inputText value="#{signupBean.firstName}"
+                                          id="firstName"
+                                          required="true"
+                                          requiredMessage="Pole FirstName jest wymagane!"
+                                          validatorMessage="Niepoprawny format pola">
+            <f:validateLength minimum="3"/>
+            <f:validateLength maximum="23"/>
+        </h:inputText>
+            <h:message for="firstName"></h:message>
+            <br/><br/>
+
+            e-mail: <h:inputText value="#{signupBean.email}"
+                                 id="email"
+                                 required="true"
+                                 requiredMessage="Pole e-mail jest wymagane!"
+                                 validatorMessage="Niepoprawny format pola">
+            <f:validateRegex pattern="[0-9A-Za-z\._]{1,20}@[0-9A-Za-z\._]{1,14}\.[0-9A-Za-z]{2,10}"/>
+            <f:validateLength minimum="3"/>
+            <f:validateLength maximum="33"/>
+        </h:inputText>
+            <h:message for="email"></h:message>
+            <br/><br/>
+
+            <h:commandButton value="Zarejestruj !" action="#{signupBean.register}"/>
+        </h:form>
+        <!-- </fieldset> -->
+
+        <hr/>
+
+    </div>
+</h:body>
+</html>

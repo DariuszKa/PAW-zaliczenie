@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Sukces rejestracji</title>
+</h:head>
+
+<h:body>
+    <div align="center">
+        <h1>EBD rejestracja - sukces</h1>
+
+        <p>Gratulacje #{signupBean.nickName}, zostałeś zarejestrowany!</p>
+        <!-- <p>Gratulacje, zostałeś zarejestrowany!</p> -->
+
+        <hr/>
+
+        <!-- <a href="login.xhtml">Link do logowania</a> -->
+        <h:form>
+            <h:commandLink action="index.xhtml" value="Zaloguj się do serwisu"></h:commandLink><br/>
+        </h:form>
+
+    </div>
+</h:body>
+</html>

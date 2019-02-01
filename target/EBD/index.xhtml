@@ -1,46 +1,49 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
 <h:head>
-    <title>Strona logowania</title>
+    <title>Strona startowa</title>
 </h:head>
 <h:body>
+    <div id="login" style="display: #{signupBean.displayLogin}">
+        <ui:include src="login.xhtml"/>
+    </div>
+
+    <div id="signup" style="display: #{signupBean.displaySignup}">
+        <ui:include src="signup.xhtml"/>
+    </div>
+
+    <br/>
+    <hr/>
+    Nie masz jeszcze konta?<br/>
     <h:form>
-        <h2>Logowanie użytkownika</h2>
-        <h:outputText value="Twój login:  "/>
-        <h:inputText value="#{loginBean.user}"
-                     id="username"
-                     required="true"
-                     requiredMessage=" Pole Twój login jest wymagane!"
-                     validatorMessage=" Niepoprawny format pola. Wpisz 5-15 liter/cyfr">
-            <f:validateLength minimum="5"/>
-            <f:validateLength maximum="15"/>
-        </h:inputText>
-        <h:message for="username"></h:message>
-        <br/><br/>
-
-        <h:outputText value="Kod wejścia: "/>
-        <h:inputSecret value="#{loginBean.pwd}"
-                       id="password"
-                       required="true"
-                       requiredMessage=" Pole Kod wejścia jest wymagane!"
-                       validatorMessage=" Niepoprawny format pola. Wpisz 5-15 liter/cyfr/.,-_!?">
-            <f:validateLength minimum="5"/>
-            <f:validateLength maximum="15"/>
-        </h:inputSecret>
-        <h:message for="password"></h:message>
-        <p style="font-style: italic;">
-            Uwaga! Wersja testowa serwisu. Nie używaj haseł stosowanych do innych celów!
-        </p>
-        <br/><br/>
-
-        <h:commandButton action="#{loginBean.validateUsernamePassword}" value="Zaloguj"></h:commandButton>
+        <h:commandLink action="#{signupBean.doSignup}" value="Utwórz konto w serwisie"></h:commandLink><br/>
     </h:form>
 
-    <hr/>
-    <a href="signup.xhtml">Utwórz konto w serwisie</a>
+    <!-- <script type="text/javascript">
+        function toggle() {
+            var buffer = "#{news.wasRead}"
+
+            var element1 = document.getElementById("login")
+            var element2 = document.getElementById("signup")
+            var element3 = document.getElementById("buttonId")
+            //var element3 = document.getElementsByName("buttonN")
+            //var element3 = document.getElementsByClassName("buttonC")
+            if(element1.style.display === 'block') {
+                element1.style.display = 'none';
+                element2.style.display = 'block';
+                element3.value = 'Zaloguj się do serwisu';
+            } else {
+                element1.style.display = 'block'
+                element2.style.display = 'none';
+                element3.value = 'Utwórz konto w serwisie';
+            }
+        }
+    </script> -->
 
 </h:body>
 </html>

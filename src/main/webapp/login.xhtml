@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Logowanie</title>
+</h:head>
+
+<h:body>
+    <div align="left">
+        <h:form>
+            <h2>Logowanie użytkownika do serwisu</h2>
+
+            <h:outputText value="Twój login: "/>&nbsp;
+            <h:inputText value="#{loginBean.user}"
+                         id="username"
+                         required="true"
+                         requiredMessage=" Pole Twój login jest wymagane!"
+                         validatorMessage=" Niepoprawny format pola. Pierwsza litera, 5-15 liter/cyfr">
+                <f:validateLength minimum="5" maximum="15"/>
+                <f:validateRegex pattern="[A-Za-z][0-9A-Za-z]{3,15}"/>
+
+            </h:inputText>
+            &nbsp;<h:message for="username"></h:message>
+            <br/><br/>
+
+            <h:outputText value="Twoje hasło: "/>
+            <h:inputSecret value="#{loginBean.pwd}"
+                           id="pwd"
+                           required="true"
+                           requiredMessage=" Pole Hasło jest wymagane!"
+                           validatorMessage=" Niepoprawny format pola. Wpisz 8-18 liter/cyfr/.,-_!">
+                <f:validateLength minimum="8" maximum="18"/>
+                <f:validateRegex pattern="[0-9A-Za-z\.,_\-!]{7,19}"/>
+            </h:inputSecret>
+            &nbsp;<h:message for="pwd"></h:message>
+            <br/><br/>
+
+            <p style="font-style: italic;">
+                Uwaga! Wersja testowa serwisu. Nie używaj haseł stosowanych do innych celów!
+            </p>
+
+            <h:commandButton action="#{loginBean.validateUsernamePassword}" value="Zaloguj się"></h:commandButton>
+
+        </h:form>
+    </div>
+</h:body>
+</html>
