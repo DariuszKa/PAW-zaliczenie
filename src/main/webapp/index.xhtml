@@ -11,43 +11,23 @@
 </h:head>
 
 <h:body>
+
     <div id="login" style="display: #{signupBean.displayLogin}">
         <ui:include src="login.xhtml"/>
+
+        <br/>
+        <hr/>
+        Nie masz jeszcze konta?<br/>
+        <h:form>
+            <h:commandLink action="#{signupBean.doSignup}" value="Utwórz konto w serwisie"></h:commandLink><br/>
+        </h:form>
     </div>
+
 
     <div id="signup" style="display: #{signupBean.displaySignup}">
         <ui:include src="signup.xhtml"/>
     </div>
     <br/>
-
-
-    <br/>
-    <hr/>
-    Nie masz jeszcze konta?<br/>
-    <h:form>
-        <h:commandLink action="#{signupBean.doSignup}" value="Utwórz konto w serwisie"></h:commandLink><br/>
-    </h:form>
-
-    <!-- <script type="text/javascript">
-        function toggle() {
-            var buffer = "#{news.wasRead}"
-
-            var element1 = document.getElementById("login")
-            var element2 = document.getElementById("signup")
-            var element3 = document.getElementById("buttonId")
-            //var element3 = document.getElementsByName("buttonN")
-            //var element3 = document.getElementsByClassName("buttonC")
-            if(element1.style.display === 'block') {
-                element1.style.display = 'none';
-                element2.style.display = 'block';
-                element3.value = 'Zaloguj się do serwisu';
-            } else {
-                element1.style.display = 'block'
-                element2.style.display = 'none';
-                element3.value = 'Utwórz konto w serwisie';
-            }
-        }
-    </script> -->
 
 </h:body>
 </html>
