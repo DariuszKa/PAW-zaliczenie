@@ -110,7 +110,20 @@
                             </h:column> -->
 
                             <h:column>
-                                <f:facet name="header">Akcja.............<s:if test="#{loginBean.isAdmin}">.........</s:if></f:facet>
+                                <!-- <f:facet name="header">Akcja.............<s:if test="#{loginBean.isAdmin}">.........</s:if></f:facet> -->
+
+                                <!-- <s:if test="#{loginBean.isAdmin}">
+                                    <f:facet name="header" style="width:70px;align=center">Akcja</f:facet>
+                                </s:if>
+                                <s:if test="#{!loginBean.isAdmin}">
+                                    <f:facet name="header" style="width:140px;align=center">Akcja</f:facet>
+                                </s:if> -->
+
+                                <f:facet name="header">
+                                    <s:if test="#{loginBean.isAdmin==true}"><div style="width:95px">Akcja</div></s:if>
+                                    <s:if test="#{loginBean.isAdmin==false}"><div style="width:70px">Akcja</div></s:if>
+                                </f:facet>
+
                                 <h:link outcome="read.xhtml?id=#{news.id}" value="" title="Czytaj">
                                     <h:graphicImage library="img" name="read.png"/>
                                 </h:link>
